@@ -23,7 +23,7 @@
 %
 \usepackage{txfonts}
 
-\voffset-0.5in
+%\voffset-0.5in
 
 %MNRAS
 \title[A Phenomenological Model for the Intra-Cluster Medium]{A Phenomenological Model for the Intra-Cluster Medium that matches X-ray and Sunyaev-Zel'dovich observations}
@@ -102,7 +102,7 @@ with SZ-derived measurements. Only if our model matches available cluster data
 on the gas properties, we can safely use it in Paper~2.} In this work, the cluster mass $M_{\Delta}$ 
 and radius $R_{\Delta}$ are defined with respect to a density that is $\Delta=200$ or 
 $\Delta=500$ times the \emph{critical} density of the Universe. We adopt density 
-parameters of $\Omega_{\rmn{m}}=0.3$, $\Omega_{\Lambda}=0.7$ and today's 
+parameters of $\Omega_{\rmn{m}}=0.27$, $\Omega_{\Lambda}=0.73$ and today's 
 Hubble constant of $H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70} = 0.7$.
 
 
@@ -111,11 +111,12 @@ Hubble constant of $H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70
 \section{MultiDark simulation and final cluster sample}
 \label{sec:2}
 The MultiDark simulation used in this work is described in detail in \cite{2011arXiv1104.5130P}.  
-It is an $N$-body cosmological simulation done with
-the Adaptive-Refinement-Tree (ART) code \citep{1997ApJS..111...73K} of
-$2048^3$ particles within a ($1000$~Mpc~$h^{-1}$)$^3$ cube. The latest WMAP5 and
-WMAP7 cosmological parameters were used. This simulation is particularly well
-suited for our purpose because of its large number of clusters.
+It is an $N$-body cosmological simulation done with the Adaptive-Refinement-Tree (ART) 
+code \citep{1997ApJS..111...73K} of $2048^3$ particles within a ($1000$~Mpc~$h^{-1}$)$^3$ 
+cube. The adopted cosmological parameters are $\Omega_{\rmn{m}}=0.27$, $\Omega_{\Lambda}=0.73$,
+$\Omega_\rmn{b}=0.0469$, $n_\rmn{s}=0.95$, $h=0.7$ and $\sigma_8=0.82$. This simulation is 
+particularly well suited for our purpose because of its large 
+number of high-mass objects, i.e., galaxy clusters.
  
 We use the MultiDark halo catalog from its on-line database,\footnote{www.multidark.org.} 
 constructed with the Bound Density Maxima algorithm \citep{1997astro.ph.12217K}.  
@@ -134,9 +135,9 @@ $M_{200}\geq1\times10^{14}$~$h^{-1}$~M$_{\odot}\approx1.4\times10^{14}$~$h_{70}^
 which ensures $k_{\rmn{B}}T \gtrsim 2.6$~keV, assuming the $M_{500} - T_{\rmn{ci}}$ relation
 of \cite{2010MNRAS.406.1773M}.
 
-{\bf In Paper~2, we present predictions for the LOFAR radio observatory\footnote{www.lofar.org} 
+{\bf In Paper~2, we present predictions for the LOFAR radio observatory
 which is expected to detect diffuse radio emission in clusters up to redshift $z \approx 1$ (e.g.,
-\citealp{2010A&A...509A..68C,2012JApA..tmp...34R}).} 
+\citealp{2012JApA..tmp...34R}).} 
 Thus, we make use of different simulation snapshots up to $z=1$. 
 {\bf The extrapolation of our model beyond this redshift is rather uncertain as it is based
 on observations at low(er) redshift.}
@@ -226,7 +227,7 @@ simulate the natural scatter of the gas profiles.\footnote{The values
 
 \begin{figure} 
 \centering
-\includegraphics[width=0.5\textwidth]{figures/gas_profiles.eps}
+\includegraphics[width=0.48\textwidth]{figures/gas_profiles.eps}
 \caption{Electron density profiles of the 31 clusters in the REXCESS sample. Grey and black lines represent NCCCs and CCCs, respectively. The blue and red lines represent our GNFW mean profile for the NCCCs and CCCs, respectively.}
 \label{fig:gas_profiles}
 \end{figure}
@@ -249,10 +250,10 @@ surveys will have to determine this property also as a function of redshift.
 
 \begin{figure*} 
 \centering
-\includegraphics[width=0.33\textwidth]{figures/lx_m.eps}
-\includegraphics[width=0.33\textwidth]{figures/yx_m.eps}
-\includegraphics[width=0.33\textwidth]{figures/sz_m.eps}
-\caption{X-ray and SZ scaling relations. Grey triangles show the MultiDark
+\includegraphics[width=0.48\textwidth]{figures/lx_m.eps}
+\includegraphics[width=0.48\textwidth]{figures/yx_m.eps}
+%\includegraphics[width=0.33\textwidth]{figures/sz_m.eps}
+\caption{X-ray scaling relations. Grey triangles show the MultiDark
   sample (limited to the mass range covered by observations), the black line is
   the corresponding scaling relation, and the blue line is the
   observational result. The black crosses represent the median values of the
@@ -260,13 +261,13 @@ surveys will have to determine this property also as a function of redshift.
   bars), and the vertical error bars represent the standard deviation within a
   bin.  \emph{Left.} We compare the bolometric X-ray luminosity-to-mass
   relation, $L_{\rmn{bol}}-M_{500}$, at $z=0.2$ to the observational sample by
-  \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. \emph{Center.}
-  $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
-  observational sample by \protect\cite{2010MNRAS.406.1773M}. \emph{Right.}
-  $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.18$ in comparison
-  to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
-  median redshift of $0.18$. The bottom panels show the relative difference to
-  the observational scaling relations.}
+  \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
+  \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
+  observational sample by \protect\cite{2010MNRAS.406.1773M}.} 
+  %\emph{Right.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
+  %to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
+  %median redshift of about $0.18$. The bottom panels show the relative difference to
+  %the observational scaling relations.}
 \label{fig:X_LM}
 \end{figure*}
 
@@ -284,7 +285,7 @@ as $\rho_{\rmn{gas}}(z) = E(z)^{2} \rho_{\rmn{gas}}(z=0)$, where $E(z)^{2} =
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{X-ray and SZ scaling relations}
+\section{X-ray scaling relations and luminosity function}
 \label{sec:4}
 
 In order to check whether our phenomenologically derived gas profiles reproduce
@@ -341,7 +342,7 @@ distributed with a standard deviation of $\sigma_{yx} \approx 0.18$ that matches
 the observational results of \cite{2010MNRAS.406.1773M}, which report a scatter
 of $\sigma_{yx} = 0.185$.
 
-In the middle panel of Fig.~\ref{fig:X_LM}, we compare the
+In the right panel of Fig.~\ref{fig:X_LM}, we compare the
 $Y_{\rmn{X}}-M_{500}$ relation of our sample to observational data
 \citep{2010MNRAS.406.1773M}. The model agrees nicely at the high-mass end, but
 underpredicts the observed scaling at low masses by about $20\%$ (at the
@@ -370,21 +371,6 @@ Table~\ref{tab:YXfits} where our $Y_{\rmn{X}}$ scaling relations are reported),
 significantly higher than the value of $\sigma_{yx} = 0.052$ found by
 \cite{2010MNRAS.406.1773M}.
 
-In the right panel of Fig.~\ref{fig:X_LM}, we compare the
-$Y_{\rmn{SZ}}-M_{500}$ relation in our model (calculated as in equation~(3) of
-\citealp{2011arXiv1109.3709B}) with the observed scaling relation by the
-\cite{2013arXiv1303.5080P}. {\bf We compare with the result obtained from the 
-\emph{Planck} Cosmo sample with Malmquist bias correction (see their Table~A.1),
-which has a median redshift of $0.18$. Hence, we compare the data to our relation 
-at the MultiDark snapshot $z=0.18$ (that contains 11105 clusters 
-above our mass cut) which however is not used throughout the rest of the work}. Our
-model reproduces the data remarkably well, except for the high-mass end where
-our simulations have a weaker constraining power due to the smaller box size in
-comparison to the survey volume of {\em Planck}.  We find a scatter of
-$\sigma_{yx} \approx 0.11$ which compares well with the \emph{Planck} result of
-$\sigma_{yx} \approx 0.08$. In Table~\ref{tab:YSZfits}, we report our SZ scaling
-relations for different redshifts.
- 
 \begin{table} 
 \begin{center}
 \caption{$L_{\rmn{bol}}-M_{500}$ scaling relations.}
@@ -431,42 +417,32 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \footnotesize{Note. Scaling relations are reported in the form of $\log_{10}~(E(z)~Y_{\rmn{X},500}~/~h_{70}^{-2.5}~\rmn{M_{\odot}}~\rmn{keV})=A+B~\log_{10}~(E(z)~M_{500}~/~h_{70}^{-1}~\rmn{M_{\odot}})$. The relation scatter $\sigma_{yx}$ is also shown.}
 \end{table}
 
-\begin{table} 
-\begin{center}
-\caption{$Y_{\rmn{SZ}, 500}-M_{500}$ scaling relations.}
-\medskip
-\begin{tabular}{cccc}
-\hline
-\phantom{\Big|}
-redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
-\hline\\[-0.5em]
- 0      & $-27.93\pm0.07$ & $1.60\pm0.01$ & 0.109\\
- 0.1   & $-27.74\pm0.07$ & $1.59\pm0.01$ & 0.109\\
- 0.18 & $-27.73\pm0.08$ & $1.59\pm0.01$ & 0.109\\
- 0.2   & $-27.65\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
- 0.4   & $-27.57\pm0.10$ & $1.59\pm0.01$ & 0.108\\ 
- 0.61 & $-27.50\pm0.13$ & $1.59\pm0.01$ & 0.109\\ 
- 0.78 & $-27.15\pm0.18$ & $1.58\pm0.01$ & 0.109\\ 
- 1      & $-27.01\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em] 
-\hline
-\end{tabular}
-\label{tab:YSZfits}
-\end{center}
-\footnotesize{Note. Scaling relations are reported in the form of $\log_{10}~(E(z)^{-2/3}~Y_{\rmn{SZ},500}~/~h_{70}^{-2.5}~\rmn{Mpc}^{2})=A+B~\log_{10}~(M_{500}~/~h_{70}^{-1}~\rmn{M_{\odot}})$. The relation scatter $\sigma_{yx}$ is also shown.}
-\end{table}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{X-ray luminosity function}
-\label{sec:5}
-
+\subsection{X-ray Luminosity Function}
 Studies of the XLF got out of fashion during the last years due to the
 difficulties of using the X-ray luminosity for cosmological purposes. The X-ray
 emissivity scales with the square of the gas density, which makes it subject to
 density variations and clumping. This implies large scatter that causes a large
 Malmquist bias and underlines the necessity of careful mock surveys that need to
 address all systematics.
+
+\begin{figure} 
+\centering
+\includegraphics[width=0.48\textwidth]{figures/xlf.eps}
+\caption{Bolometric and soft-band ($0.1-2.4$~keV) XLFs. Shown are the soft-band
+  data points, the soft-band and bolometric Schechter fits of the BCS sample of
+  \protect\cite{1997ApJ...479L.101E}, which has a median of $z \approx 0.08$.  While the
+  soft-band XLF, which was obtained applying the \protect\cite{2010MNRAS.406.1773M}
+  $L_{\rmn{X}}-M_{500}$ relation to the MultiDark $z = 0.1$ snapshot, compares
+  well with the BCS data points, it deviates from the corresponding Schechter
+  fit. We also show the bolometric XLF of \protect\cite{2010MNRAS.406.1773M} and
+  bolometric XLF of our model at $z=0.1$. The XLFs are calculated in equally
+  log-spaced mass bins; the error bars represent the Poissonian errors. Note
+  that we limit the comparison to the luminosity range covered by our sample,
+  where we cut the lowest part because in that range the XLF rapidly drops due
+  to the imposed mass cut.}
+\label{fig:XLF}
+\end{figure}
 
 Nevertheless, it provides a complementary check for our model. To this end, we
 use the \emph{ROSAT} brightest cluster sample (BCS) XLF
@@ -495,24 +471,120 @@ satellite (e.g., \citealp{2011MSAIS..17..159C}) and further studies in this
 direction are desirable. For these reasons, we do not show XLF predictions at
 other redshifts, leaving this for a future study.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SZ scaling relations}
+\label{sec:5}
+In the right panel of Fig.~\ref{fig:X_LM}, we compare the
+$Y_{\rmn{SZ}}-M_{500}$ relation in our model (calculated as in equation~(3) of
+\citealp{2011arXiv1109.3709B}) with the observed scaling relation by the
+\cite{2013arXiv1303.5080P}. {\bf We compare with the result obtained from the 
+\emph{Planck} COSMO sample with Malmquist bias correction (see their Table~A.1),
+which has a median redshift of $0.18$. Hence, we compare the data to our relation 
+at the MultiDark snapshot $z=0.2$}. Our model reproduces the data remarkably well, except 
+for the high-mass end where our simulations have a weaker constraining power due to the 
+smaller box size in comparison to the survey volume of {\em Planck}. We find a scatter of
+$\sigma_{yx} \approx 0.11$ which compares well with the \emph{Planck} result of
+$\sigma_{yx} \approx 0.08$. In Table~\ref{tab:YSZfits}, we report our SZ scaling
+relations for different redshifts.
+
 \begin{figure} 
 \centering
-\includegraphics[width=0.48\textwidth]{figures/xlf.eps}
-\caption{Bolometric and soft-band ($0.1-2.4$~keV) XLFs. Shown are the soft-band
-  data points, the soft-band and bolometric Schechter fits of the BCS sample of
-  \protect\cite{1997ApJ...479L.101E}, which has a median of $z \approx 0.08$.  While the
-  soft-band XLF, which was obtained applying the \protect\cite{2010MNRAS.406.1773M}
-  $L_{\rmn{X}}-M_{500}$ relation to the MultiDark $z = 0.1$ snapshot, compares
-  well with the BCS data points, it deviates from the corresponding Schechter
-  fit. We also show the bolometric XLF of \protect\cite{2010MNRAS.406.1773M} and
-  bolometric XLF of our model at $z=0.1$. The XLFs are calculated in equally
-  log-spaced mass bins; the error bars represent the Poissonian errors. Note
-  that we limit the comparison to the luminosity range covered by our sample,
-  where we cut the lowest part because in that range the XLF rapidly drops due
-  to the imposed mass cut.}
-\label{fig:XLF}
+\includegraphics[width=0.48\textwidth]{figures/sz_m.eps}
+\caption{SZ scaling relations. Grey triangles show the MultiDark
+  sample (limited to the mass range covered by observations), the black line is
+  the corresponding scaling relation, and the blue line is the
+  observational result. The black crosses represent the median values of the
+  quantity in question for a given mass bin (indicated by horizontal error
+  bars), and the vertical error bars represent the standard deviation within a
+  bin.  \emph{Left.} We compare the bolometric X-ray luminosity-to-mass
+  relation, $L_{\rmn{bol}}-M_{500}$, at $z=0.2$ to the observational sample by
+  \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
+  \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
+  observational sample by \protect\cite{2010MNRAS.406.1773M}. 
+  \emph{Left.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
+  to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
+  median redshift of about $0.18$. The bottom panels show the relative difference to
+  the observational scaling relations.}
+\label{fig:SZ_M}
 \end{figure}
 
+\begin{figure*} 
+\centering
+\includegraphics[width=0.48\textwidth]{figures/sz_m_SPT.eps}
+\includegraphics[width=0.48\textwidth]{figures/sz_m_ACT.eps}
+\caption{SZ scaling relations. Grey triangles show the MultiDark
+  sample (limited to the mass range covered by observations), the black line is
+  the corresponding scaling relation, and the blue line is the
+  observational result. The black crosses represent the median values of the
+  quantity in question for a given mass bin (indicated by horizontal error
+  bars), and the vertical error bars represent the standard deviation within a
+  bin.  \emph{Left.} We compare the bolometric X-ray luminosity-to-mass
+  relation, $L_{\rmn{bol}}-M_{500}$, at $z=0.2$ to the observational sample by
+  \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
+  \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
+  observational sample by \protect\cite{2010MNRAS.406.1773M}. 
+  \emph{Left.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
+  to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
+  median redshift of about $0.18$. The bottom panels show the relative difference to
+  the observational scaling relations.}
+\label{fig:SZ_M_1}
+\end{figure*}
+
+\begin{table} 
+\begin{center}
+\caption{$Y_{\rmn{SZ}, 500}-M_{500}$ scaling relations.}
+\medskip
+\begin{tabular}{cccc}
+\hline
+\phantom{\Big|}
+redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
+\hline\\[-0.5em]
+ 0      & $-27.93\pm0.07$ & $1.60\pm0.01$ & 0.109\\
+ 0.1   & $-27.74\pm0.07$ & $1.59\pm0.01$ & 0.109\\
+ 0.18 & $-27.73\pm0.08$ & $1.59\pm0.01$ & 0.109\\
+ 0.2   & $-27.65\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
+ 0.4   & $-27.57\pm0.10$ & $1.59\pm0.01$ & 0.108\\ 
+ 0.61 & $-27.50\pm0.13$ & $1.59\pm0.01$ & 0.109\\ 
+ 0.78 & $-27.15\pm0.18$ & $1.58\pm0.01$ & 0.109\\ 
+ 1      & $-27.01\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em] 
+\hline
+\end{tabular}
+\label{tab:YSZfits}
+\end{center}
+\footnotesize{Note. Scaling relations are reported in the form of $\log_{10}~(E(z)^{-2/3}~Y_{\rmn{SZ},500}~/~h_{70}^{-2.5}~\rmn{Mpc}^{2})=A+B~\log_{10}~(M_{500}~/~h_{70}^{-1}~\rmn{M_{\odot}})$. The relation scatter $\sigma_{yx}$ is also shown.}
+\end{table}
+
+{\bf We additionally compare our $Y_{\rmn{SZ}}$ to the results from the South Pole Telescope (SPT) 
+and Atacama Cosmology Telescope (ACT) surveys.
+We select a subsample of SPT clusters from \cite{2013ApJ...763..127R}, formed by the
+115 objects with confirmed redshift and signal-to-noise above 5, which has a median
+redshift of 0.56 with rms of 0.27. \cite{2013ApJ...763..127R} provide $Y_{\rmn{SZ}}$ 
+within an aperture of $1'$, corresponding to a median radius of $0.2$~h$_{70}^{-1}$~Mpc 
+at $z = 0.56$, which we use as aperture to calculate $Y_{\rmn{SZ, SPT}}$ in our MultiDark sample.
+
+In the left panel of Fig.~\ref{fig:SZ_M_1}, we compare the SPT cluster subsample to our 
+scaling relation at the three different MutliDark snapshots of $z = 0.4$, $0.61$ 
+and $0.78$. We color-coded the SPT clusters in order to show that the SPT 
+selection function is nearly redshift-independent. The fact that the angular size of galaxy clusters 
+decreases with redshift is an advantage for SPT due to its small beam, in fact, higher-redshift clusters 
+are less confused by primary CMB fluctuations. This effect is inverse for \emph{Planck} due to its
+larger beam. We can conclude that while our $Y_{\rmn{SZ}}-M_{500}$ scaling relation 
+compare fairly well to the median SPT cluster population, the SPT sample has a too
+large scatter to be well represented by single MultiDark snapshots.
+
+In the right panel of Fig.~\ref{fig:SZ_M_1}, we compare our scaling relation to
+the ACT sample overlapping with the Sloan Digital Sky Survey stripe 82 
+(\citealp{2013JCAP...07..008H}; we use the quantities inferred from the
+universal pressure profile scaling relation).
+The sample has a median redshift of 0.58 with rms of 0.28.
+\cite{2013JCAP...07..008H} provides $Y_{\rmn{SZ}}$ within $R_{500}$ which
+median, $0.42$~h$_{70}^{-1}$~Mpc, is, however, almost half of ours at the
+MultiDark snapshot $z=0.61$. Therefore, we use an aperture of $0.42$~h$_{70}^{-1}$~Mpc
+to calculate our $Y_{\rmn{SZ, ACT}}$. Also in this case we can conclude
+that our mock sample reproduce fairly well the median observational sample. 
+Note, however, the very different scatter of SPT and ACT samples.} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -546,19 +618,10 @@ radio, X-ray and gamma-ray data.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
-We thank Anders Pinzke for many useful discussions. 
-%We thank Lawrence Rudnick
-%and Shea Brown for a reanalysis of their
-%352~MHz radio map of Coma, and for useful discussions. We thank Matteo
-%Murgia for kindly providing the radio surface brightness profiles of Ophiuchucs
-%and Abell~2163 that have been recomputed with respect to the Reiprich \&
-%B\"{o}ringher (2002) cluster positions, and Wolfgang Reich for providing the
-%1.4~GHz radio map of Coma.  
-We also thank Harald Ebeling, Stefan Gottl{\"o}berg,
-Anatoly Klypin, Andrey Kravtsov, Adam Mantz, Frazer Pearce, Miguel-Angel Perez
-Torres, Huub R{\"o}ttgering, Jos\'e Alberto Rubi\~no, and Gustavo Yepes, for the
-useful discussions and advices. Finally, we thank the MultiDark database
-people, in particular Adrian Partl and Kristin Riebe. 
+We thank Anders Pinzke for many useful discussions. We also thank Harald Ebeling, 
+Stefan Gottl{\"o}berg, Anatoly Klypin, Andrey Kravtsov, Adam Mantz, Frazer Pearce, 
+Jos\'e Alberto Rubi\~no, and Gustavo Yepes, for the useful discussions and advices. 
+Finally, we thank the MultiDark database people, in particular Adrian Partl and Kristin Riebe. 
 F.Z.{\ }acknowledges the CSIC financial support as a JAE-Predoc grant of the 
 program ``Junta para la Ampliaci\'on de Estudios'' co-financed by the FSE. 
 F.Z.{\ }acknowledges the hospitality of the Leiden Observatory during his stay.

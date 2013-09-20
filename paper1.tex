@@ -46,15 +46,19 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-  ...
-  We build a mock galaxy cluster catalog from the large MultiDark $N$-body $\Lambda$CDM 
-  simulation by adopting a phenomenological gas density model for each cluster based on X-ray
-  measurements that matches Sunyaev-Zel'dovich and X-ray scaling relations and
-  luminosity function. 
-  ...
-  We make our cosmologically complete multi-frequency mock catalogs for 
-  the (non-)thermal cluster emission at different redshifts publicly and freely available on-line
-  through the MultiDark database.
+  {\bf We construct a phenomenological gas density model for the intra-cluster medium
+  based on X-ray inferred densities for cool-core and non cool-core clusters, and a 
+  cluster-mass-dependent gas fraction. We then build a mock galaxy cluster 
+  catalog from the large MultiDark $N$-body $\Lambda$CDM simulation by assigning
+  such a (mass-dependent) gas density profile to each dark matter halo in our sample, 
+  which is sorted into cool-core and non cool-core clusters according to a dynamical 
+  disturbance parameter. Our gas density model permits to match the observed 
+  Sunyaev-Zel'dovich and X-ray scaling relations and luminosity function. Therefore,
+  it can be reliable applied to make predictions for present and future instruments. 
+  We apply our catalogs to calculate non-thermal radio and gamma-ray emission of galaxy 
+  clusters in a companion paper. Eventually, we make our cosmologically complete multi-frequency 
+  mock catalogs for the (non-)thermal cluster emission at different redshifts publicly and freely 
+  available on-line through the MultiDark database.}
 \end{abstract}
 
 \begin{keywords}
@@ -71,39 +75,80 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
 \begingroup
 \let\thefootnote\relax\footnotetext{* f.zandanel@uva.nl}
 \let\thefootnote\relax\footnotetext{$\dagger$ christoph.pfrommer@h-its.org}
-\let\thefootnote\relax\footnotetext{$\S$ fprada@iaa.es}
+\let\thefootnote\relax\footnotetext{$\S$ fprada@iaa.es\\}
 \endgroup
 
-{\bf Introduction...}
+{\bf The study of the (non-)thermal emission in galaxy clusters provides
+important information on structure formation process and on 
+fundamental characteristics of our Universe. This field is at a 
+crucial point of its development thanks to the very low sensitivity of present and future-generation 
+instruments such as LOFAR\footnote{www.lofar.org}, \emph{e}ROSITA\footnote{www.mpe.mpg.de/eROSITA}, 
+ASTRO-H\footnote{astro-h.isas.jaxa.jp} and CTA\footnote{www.cta-observatory.org}, to name but a few. 
+Therefore, it is important to provide prospects for future surveys and
+to understand in which way they can improve our current knowledge.
+To this end, a complete cosmological mock sample of galaxy
+clusters is needed. This can be realized either using analytical 
+expressions for the cluster mass function (e.g., \citealp{2001MNRAS.321..372J}) or cosmological cluster 
+simulations. In this work, we make use of the recent MultiDark $N$-body
+simulation (\citealp{2011arXiv1104.5130P}; www.multidark.org).
 
-%
-%dark matter (DM)  
-%
-
-{\bf Our original motivation to build such a mock catalog is to predict the 
-non-thermal emission at radio and gamma-ray frequencies of a cosmological 
+Our main motivation to build such a mock catalog has been to predict the 
+non-thermal emission at radio frequencies of a cosmological 
 complete sample of galaxy clusters. This is presented in a companion 
-paper (REF, hereafter Paper~2).
-The two basic ingredients of the two works are an $N$-body, \emph{DM-only}
-cosmological simulation that we use in constructing our complete cluster sample,
-and the (non-)thermal emission model. Here, we use the MultiDark simulation that
-will be described in Section~\ref{sec:2}, along with our final cluster sample. As described 
-in Paper~2, for any given cluster, the necessary ingredients for the non-thermal emission 
-model are mass, temperature, and gas density distribution. We assign to
-each cluster in that simulation a gas density profile that is phenomenologically
-constructed from state-of-art X-ray observations, as will be shown in
-Section~\ref{sec:3}. In Section~4 and 5, we will show that this approach can successfully
-reproduce the known X-ray cluster characteristics, such as the X-ray luminosity
-function (XLF), the luminosity-mass relation, $L_{\rmn{X}}- M$, and the
-$Y_{\rmn{X}}-M$ relation, where $Y_{\rmn{X}}=M_\rmn{gas}k_{\rmn{B}}T$ with an
-X-ray-derived gas mass $M_{\rmn{gas}}$ and temperature $T$
-\citep{2006ApJ...650..128K}. Moreover, we compare our $Y_{\rmn{SZ}}-M$ relation
-with SZ-derived measurements. Only if our model matches available cluster data
-on the gas properties, we can safely use it in Paper~2.} In this work, the cluster mass $M_{\Delta}$ 
-and radius $R_{\Delta}$ are defined with respect to a density that is $\Delta=200$ or 
-$\Delta=500$ times the \emph{critical} density of the Universe. We adopt density 
-parameters of $\Omega_{\rmn{m}}=0.27$, $\Omega_{\Lambda}=0.73$ and today's 
-Hubble constant of $H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70} = 0.7$.
+paper (\citealp{paper2}; hereafter Paper~II). As described in Paper~II, for 
+any given cluster, fundamental ingredients for the non-thermal emission 
+model are the mass and gas density distribution. The MultiDark 
+simulation used here is a $N$-body, \emph{dark matter (DM)-only} simulation and, 
+therefore, does not contain any information on the intra-cluster medium (ICM) gas  
+distribution. A cosmological complete sample of clusters can 
+only be obtained from $N$-body simulations as hydrodynamical
+simulations of such large volumes are computationally too expensive.
+Therefore, we need a method to determine the ICM properties
+of any given cluster from its total mass. 
+
+The simplest approach is to assume that clusters are self-similar with 
+the thermal properties determined by their mass \citep{1986MNRAS.222..323K}.
+However, X-ray observations showed that clusters are extremely 
+complex systems. In fact, we know that self-similarity is broken, especially at 
+low-mass scales (see \citealp{2005RvMP...77..207V} for a review).
+The study of the thermodynamical condition of clusters is crucial 
+to understand how self-similarity is broken. One possible solution 
+is, for example, energy feedback from active galactic nuclei (e.g.,
+\citealp{2013arXiv1303.5443P}). 
+
+In order to build a cluster sample with realistic ICM densities, we 
+adopt a \emph{phenomenological} approach and construct our density 
+profiles from X-ray observations. We then compare the characteristics of 
+the clusters in our mock sample to observational results. We study the X-ray 
+luminosity function (XLF), the luminosity-mass relation, $L_{\rmn{X}}- M$, and 
+the $Y_{\rmn{X}}-M$ relation, where $Y_{\rmn{X}}=M_\rmn{gas}k_{\rmn{B}}T$ 
+with an X-ray-derived gas mass $M_{\rmn{gas}}$ and temperature $T$
+\citep{2006ApJ...650..128K}. Moreover, we consider the thermal 
+Sunyaev-Zel’dovich (SZ) effect and compare our $Y_{\rmn{SZ}}-M$ 
+relation with recent SZ-derived measurements. Only if our model matches
+available cluster data on the gas properties, we can safely use it in Paper~II
+and be sure that we will obtain realistic predictions.
+The final result is a complete cosmological cluster mock catalog, at
+different redshifts, containing information on the DM and ICM properties 
+of each object, together with its (non-)thermal emission at different 
+frequencies. This mock catalog reproduces existing observations
+and is useful in making predictions for future surveys.
+
+In next Section~\ref{sec:2}, we introduce the MultiDark simulation
+along with our final cluster sample. We assign to each of our clusters  
+the phenomenologically constructed gas density profile in 
+Section~\ref{sec:3}. In Sections~\ref{sec:4} and 
+\ref{sec:5}, we show that this approach can successfully reproduce 
+the known X-ray and SZ cluster characteristics. We present the
+resulting mock cluster catalogs in Section~\ref{sec:6}, and eventually 
+summarize our conclusions in Section~\ref{sec:7}.
+In this work, the cluster mass $M_{\Delta}$ and radius $R_{\Delta}$ are defined 
+with respect to a density that is $\Delta=200$ or $\Delta=500$ times the \emph{critical} 
+density of the Universe. We adopt density parameters of $\Omega_{\rmn{m}}=0.3$, 
+$\Omega_{\Lambda}=0.7$ and today's Hubble constant of 
+$H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70} = 0.7$.
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,13 +158,13 @@ Hubble constant of $H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70
 The MultiDark simulation used in this work is described in detail in \cite{2011arXiv1104.5130P}.  
 It is an $N$-body cosmological simulation done with the Adaptive-Refinement-Tree (ART) 
 code \citep{1997ApJS..111...73K} of $2048^3$ particles within a ($1000$~Mpc~$h^{-1}$)$^3$ 
-cube. The adopted cosmological parameters are $\Omega_{\rmn{m}}=0.27$, $\Omega_{\Lambda}=0.73$,
-$\Omega_\rmn{b}=0.0469$, $n_\rmn{s}=0.95$, $h=0.7$ and $\sigma_8=0.82$. This simulation is 
+cube. {\bf The adopted cosmological parameters are $\Omega_{\rmn{m}}=0.27$, $\Omega_{\Lambda}=0.73$,
+$\Omega_\rmn{b}=0.0469$, $n_\rmn{s}=0.95$, $h=0.7$ and $\sigma_8=0.82$.} This simulation is 
 particularly well suited for our purpose because of its large 
 number of high-mass objects, i.e., galaxy clusters.
  
-We use the MultiDark halo catalog from its on-line database,\footnote{www.multidark.org.} 
-constructed with the Bound Density Maxima algorithm \citep{1997astro.ph.12217K}.  
+We use the MultiDark halo catalog from its on-line database,\footnote{www.multidark.org} 
+constructed with the Bound Density Maxima (BDM) algorithm \citep{1997astro.ph.12217K}.  
 We will mainly use $M_{500}$ and $R_{500}$ for comparison with existing observational works.  
 We use the technique described in \cite{2003ApJ...584..702H} to convert $M_{200}$ and
 $R_{200}$ provided by the MultiDark halo catalog to $M_{500}$ and $R_{500}$.  In
@@ -135,13 +180,12 @@ $M_{200}\geq1\times10^{14}$~$h^{-1}$~M$_{\odot}\approx1.4\times10^{14}$~$h_{70}^
 which ensures $k_{\rmn{B}}T \gtrsim 2.6$~keV, assuming the $M_{500} - T_{\rmn{ci}}$ relation
 of \cite{2010MNRAS.406.1773M}.
 
-{\bf In Paper~2, we present predictions for the LOFAR radio observatory
+{\bf In Paper~II, we present predictions for the LOFAR radio observatory
 which is expected to detect diffuse radio emission in clusters up to redshift $z \approx 1$ (e.g.,
-\citealp{2012JApA..tmp...34R}).} 
-Thus, we make use of different simulation snapshots up to $z=1$. 
+\citealp{2012JApA..tmp...34R}).} Thus, we make use of different simulation snapshots up to $z=1$. 
 {\bf The extrapolation of our model beyond this redshift is rather uncertain as it is based
-on observations at low(er) redshift.}
-In Table~\ref{tab:z}, we show the total cluster number in our final cluster sample at different redshifts.
+on observations at low(er) redshift.} In Table~\ref{tab:z}, we show the total cluster number in 
+our final cluster sample at different redshifts.
 
 \begin{table} 
 \begin{center}
@@ -180,7 +224,8 @@ provides the needed information is the \emph{Representative XMM-Newton Cluster
 dynamical states at redshifts $0.06<z<0.18$ with detailed information on the
 de-projected electron density profiles \citep{2008A&A...487..431C}. In
 Fig.~\ref{fig:gas_profiles}, we show the 31 electron density profiles of the
-REXCESS sample color-coded by CCCs and NCCCs.
+REXCESS sample color-coded by non cool-core clusters (NCCCs) and 
+cool-core clusters (CCCs). 
 
 In order to obtain an electron density profile that we will attach to our
 simulated clusters, we use a generalized Navarro-Frank-White (GNFW) profile,
@@ -228,7 +273,8 @@ simulate the natural scatter of the gas profiles.\footnote{The values
 \begin{figure} 
 \centering
 \includegraphics[width=0.48\textwidth]{figures/gas_profiles.eps}
-\caption{Electron density profiles of the 31 clusters in the REXCESS sample. Grey and black lines represent NCCCs and CCCs, respectively. The blue and red lines represent our GNFW mean profile for the NCCCs and CCCs, respectively.}
+\caption{Electron density profiles of the 31 clusters in the REXCESS sample. Grey and black lines represent 
+NCCCs and CCCs, respectively. The blue and red lines represent our GNFW mean profile for the NCCCs and CCCs, respectively.}
 \label{fig:gas_profiles}
 \end{figure}
 
@@ -253,7 +299,7 @@ surveys will have to determine this property also as a function of redshift.
 \includegraphics[width=0.48\textwidth]{figures/lx_m.eps}
 \includegraphics[width=0.48\textwidth]{figures/yx_m.eps}
 %\includegraphics[width=0.33\textwidth]{figures/sz_m.eps}
-\caption{X-ray scaling relations. Grey triangles show the MultiDark
+\caption{{\bf X-ray scaling relations. Grey triangles show the MultiDark
   sample (limited to the mass range covered by observations), the black line is
   the corresponding scaling relation, and the blue line is the
   observational result. The black crosses represent the median values of the
@@ -263,7 +309,7 @@ surveys will have to determine this property also as a function of redshift.
   relation, $L_{\rmn{bol}}-M_{500}$, at $z=0.2$ to the observational sample by
   \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
   \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
-  observational sample by \protect\cite{2010MNRAS.406.1773M}.} 
+  observational sample by \protect\cite{2010MNRAS.406.1773M}.}} 
   %\emph{Right.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
   %to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
   %median redshift of about $0.18$. The bottom panels show the relative difference to
@@ -480,7 +526,7 @@ In the right panel of Fig.~\ref{fig:X_LM}, we compare the
 $Y_{\rmn{SZ}}-M_{500}$ relation in our model (calculated as in equation~(3) of
 \citealp{2011arXiv1109.3709B}) with the observed scaling relation by the
 \cite{2013arXiv1303.5080P}. {\bf We compare with the result obtained from the 
-\emph{Planck} COSMO sample with Malmquist bias correction (see their Table~A.1),
+\emph{Planck} COSMO sample with Malmquist bias correction,
 which has a median redshift of $0.18$. Hence, we compare the data to our relation 
 at the MultiDark snapshot $z=0.2$}. Our model reproduces the data remarkably well, except 
 for the high-mass end where our simulations have a weaker constraining power due to the 
@@ -492,21 +538,13 @@ relations for different redshifts.
 \begin{figure} 
 \centering
 \includegraphics[width=0.48\textwidth]{figures/sz_m.eps}
-\caption{SZ scaling relations. Grey triangles show the MultiDark
-  sample (limited to the mass range covered by observations), the black line is
-  the corresponding scaling relation, and the blue line is the
-  observational result. The black crosses represent the median values of the
-  quantity in question for a given mass bin (indicated by horizontal error
-  bars), and the vertical error bars represent the standard deviation within a
-  bin.  \emph{Left.} We compare the bolometric X-ray luminosity-to-mass
-  relation, $L_{\rmn{bol}}-M_{500}$, at $z=0.2$ to the observational sample by
-  \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
-  \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
-  observational sample by \protect\cite{2010MNRAS.406.1773M}. 
-  \emph{Left.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
-  to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
-  median redshift of about $0.18$. The bottom panels show the relative difference to
-  the observational scaling relations.}
+\caption{{\bf SZ scaling relation of our sample at $z=0.2$ in comparison to the observational 
+  sample by \protect\cite{2013arXiv1303.5080P} with a median redshift of about $0.18$.
+  Grey triangles show the MultiDark sample (limited to the mass range covered by observations), 
+  the black line is the corresponding scaling relation, and the blue line is the observational result. 
+  The black crosses represent the $Y_{\rmn{SZ}}$ median values of our sample for a given mass bin (indicated by 
+  horizontal error bars), and the vertical error bars represent the standard deviation within a
+  bin. The bottom panels show the relative difference to the observational scaling relations.}}
 \label{fig:SZ_M}
 \end{figure}
 
@@ -514,21 +552,13 @@ relations for different redshifts.
 \centering
 \includegraphics[width=0.48\textwidth]{figures/sz_m_SPT.eps}
 \includegraphics[width=0.48\textwidth]{figures/sz_m_ACT.eps}
-\caption{SZ scaling relations. Grey triangles show the MultiDark
-  sample (limited to the mass range covered by observations), the black line is
-  the corresponding scaling relation, and the blue line is the
-  observational result. The black crosses represent the median values of the
-  quantity in question for a given mass bin (indicated by horizontal error
-  bars), and the vertical error bars represent the standard deviation within a
-  bin.  \emph{Left.} We compare the bolometric X-ray luminosity-to-mass
-  relation, $L_{\rmn{bol}}-M_{500}$, at $z=0.2$ to the observational sample by
-  \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
-  \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
-  observational sample by \protect\cite{2010MNRAS.406.1773M}. 
-  \emph{Left.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
-  to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
-  median redshift of about $0.18$. The bottom panels show the relative difference to
-  the observational scaling relations.}
+\caption{{\bf SZ scaling relation of our sample at $z=0.61$ compared with the SPT and ACT results. 
+  Triangles show the MultiDark sample (limited to the mass range covered by observations) 
+  while the crosses represent the observational result. \emph{Left.} Comparison with the 
+  SPT sample \protect\citep{2013ApJ...763..127R} color-coded by redshift. 
+  $Y_{\rmn{SZ, SPT}}$ is given within an aperture of  $0.2$~h$_{70}^{-1}$~Mpc.
+  \emph{Right.} Comparison with the ACT sample \protect\citep{2013JCAP...07..008H} color-coded 
+  by redshift. $Y_{\rmn{SZ, ACT}}$ is given within an aperture of $0.42$~h$_{70}^{-1}$~Mpc.}}
 \label{fig:SZ_M_1}
 \end{figure*}
 
@@ -556,42 +586,99 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \footnotesize{Note. Scaling relations are reported in the form of $\log_{10}~(E(z)^{-2/3}~Y_{\rmn{SZ},500}~/~h_{70}^{-2.5}~\rmn{Mpc}^{2})=A+B~\log_{10}~(M_{500}~/~h_{70}^{-1}~\rmn{M_{\odot}})$. The relation scatter $\sigma_{yx}$ is also shown.}
 \end{table}
 
-{\bf We additionally compare our $Y_{\rmn{SZ}}$ to the results from the South Pole Telescope (SPT) 
-and Atacama Cosmology Telescope (ACT) surveys.
-We select a subsample of SPT clusters from \cite{2013ApJ...763..127R}, formed by the
-115 objects with confirmed redshift and signal-to-noise above 5, which has a median
-redshift of 0.56 with rms of 0.27. \cite{2013ApJ...763..127R} provide $Y_{\rmn{SZ}}$ 
+{\bf We additionally compare our $Y_{\rmn{SZ}}$ to the results from the South Pole 
+Telescope (SPT) and Atacama Cosmology Telescope (ACT) surveys.
+We select a subsample of SPT clusters from \cite{2013ApJ...763..127R} by taking
+only objects with confirmed redshift and signal-to-noise $\ge 5$. The resulting sample 
+consists of 115 clusters with a median redshift of 0.56 and rms 0.27. Note the much larger 
+scatter in redshift of the SPT sample with respect to the \emph{Planck} one that has 
+a rms of 0.11. \cite{2013ApJ...763..127R} provide $Y_{\rmn{SZ}}$ 
 within an aperture of $1'$, corresponding to a median radius of $0.2$~h$_{70}^{-1}$~Mpc 
 at $z = 0.56$, which we use as aperture to calculate $Y_{\rmn{SZ, SPT}}$ in our MultiDark sample.
 
-In the left panel of Fig.~\ref{fig:SZ_M_1}, we compare the SPT cluster subsample to our 
-scaling relation at the three different MutliDark snapshots of $z = 0.4$, $0.61$ 
-and $0.78$. We color-coded the SPT clusters in order to show that the SPT 
+In the left panel of Fig.~\ref{fig:SZ_M_1}, we compare the SPT cluster sample to our 
+scaling relation at $z = 0.61$. We color-coded the SPT clusters in order to show that the SPT 
 selection function is nearly redshift-independent. The fact that the angular size of galaxy clusters 
 decreases with redshift is an advantage for SPT due to its small beam, in fact, higher-redshift clusters 
-are less confused by primary CMB fluctuations. This effect is inverse for \emph{Planck} due to its
-larger beam. We can conclude that while our $Y_{\rmn{SZ}}-M_{500}$ scaling relation 
-compare fairly well to the median SPT cluster population, the SPT sample has a too
+are less confused by primary CMB fluctuations \citep{2013ApJ...763..127R}. This effect is inverse 
+for \emph{Planck} due to its larger beam. We can conclude that while our $Y_{\rmn{SZ}}-M_{500}$ 
+scaling relation compare well to the median SPT cluster population, the SPT sample has a too
 large scatter to be well represented by single MultiDark snapshots.
 
 In the right panel of Fig.~\ref{fig:SZ_M_1}, we compare our scaling relation to
 the ACT sample overlapping with the Sloan Digital Sky Survey stripe 82 
-(\citealp{2013JCAP...07..008H}; we use the quantities inferred from the
-universal pressure profile scaling relation).
-The sample has a median redshift of 0.58 with rms of 0.28.
-\cite{2013JCAP...07..008H} provides $Y_{\rmn{SZ}}$ within $R_{500}$ which
-median, $0.42$~h$_{70}^{-1}$~Mpc, is, however, almost half of ours at the
+\citep{2013JCAP...07..008H}. This sample has a median redshift of 0.58 with rms 
+of 0.28. \cite{2013JCAP...07..008H} provides $Y_{\rmn{SZ}}$ within $R_{500}$, which
+median, $0.42$~h$_{70}^{-1}$~Mpc, is almost half of ours at the
 MultiDark snapshot $z=0.61$. Therefore, we use an aperture of $0.42$~h$_{70}^{-1}$~Mpc
-to calculate our $Y_{\rmn{SZ, ACT}}$. Also in this case we can conclude
-that our mock sample reproduce fairly well the median observational sample. 
-Note, however, the very different scatter of SPT and ACT samples.} 
+to calculate our $Y_{\rmn{SZ, ACT}}$. 
+The fact that our $R_{500}$ does not compare well with the ACT values, while it does with 
+\emph{Planck}, may be explained as follows. We adopt the ACT measurements derived from 
+the 148~GHz data assuming that the cluster pressure is described by the universal 
+profile of \cite{2010A&A...517A..92A}. In contrast, \cite{2013arXiv1303.5080P}
+derived $R_{500}$ from X-ray measurements of $M_{500}$, similarly to
+our approach of constructing gas densities from an X-ray sample of clusters. 
+
+Summarizing, our SZ scaling relations compare very well to the result from
+the \emph{Planck} collaboration. However, the comparison with the SPT and 
+ACT samples is not as straightforward due to the different selection function 
+of these telescopes with respect to \emph{Planck}, which results in a much
+more (redshift) non-homogenous sample. Nevertheless, our mock clusters 
+can reproduce well the median SPT and ACT populations. A more detailed
+comparison would need the generation of light-cone mock catalogs,
+including instrumental effects, which is beyond the scope of this 
+work.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Multi-frequency Mock Catalogs}
+\label{sec:6}
+
+{\bf As a final product of this work, we construct cosmological complete mock catalogs of galaxy clusters, at the different redshifts of 
+Table~\ref{tab:z}, for $M_{200}\geq1\times10^{14}$~$h^{-1}$~M$_{\odot}\approx1.4\times10^{14}$~$h_{70}^{-1}$~M$_{\odot}$.
+We make these catalogs publicly available through the MultiDark database 
+(www.multidark.org) where we will also post possible updates.
+
+Our catalogs contain all the information regarding the DM properties of each object as 
+given by the corresponding original MultiDark BDM halo catalogs. Additionally, we include the
+following information:
+
+\begin{itemize}
+\item $M_{500}$ and $R_{500}$ calculated from $M_{200}$ and $R_{200}$ of the BDM catalogs with the \cite{2003ApJ...584..702H} method,
+\item the ICM X-ray temperature assigned via the $T_{\rmn{ci}}-M_{500}$ relation by \cite{2010MNRAS.406.1773M},
+\item a state flag identifying the cluster as NCCC or CCC as described in Section~\ref{sec:3},
+\item the central gas density $\rho_{\rmn{gas},0}$ with which the full ICM radial profile can be calculated as in Section~\ref{sec:3},
+\item the bolometric X-ray thermal bremsstrahlung luminosity $L_{\rmn{X, bol}}$ within $R_{500}$,
+\item the $Y_{\rmn{X}}$ and $Y_{\rmn{SZ}}$ parameters within $R_{500}$.
+\end{itemize}
+
+In Paper~II, we present a model to calculate the possible radio and gamma-ray emission of 
+clusters as result of the cosmic-ray (CR) proton-proton interactions with the ICM. We refer
+to that paper for all the details. However, we want to point out that our mock catalogs include also:
+
+\begin{itemize}
+\item a state flag identifying whether a given object is a radio-loud or a radio-quiet cluster, 
+\item the CR-to-thermal pressure averaged over the cluster volume within $R_{500}$,
+\item the synchrotron radio luminosity, within $R_{500}$, at 120~MHz and 1.4~GHz,
+\item the gamma-ray luminosity, within $R_{500}$, above 100~MeV and 100~GeV.
+\end{itemize}
+
+We warn, however, that our mock catalogs are not appropriate for all purposes. In fact, they are 
+representations of the average cluster population. While they are very useful as baseline for new 
+simulations, to test new observations, and for the non-thermal modeling of clusters, they are not 
+appropriate to perform detailed cosmology studies. A carefully modeling of the response function 
+of the considered instrument would be needed for such a purpose, together with the generation of 
+light-cone mock catalogs. Nevertheless, for flux-complete surveys, our mock catalogs are
+certainly good tools to test against models. Finally, keep also in mind that our approach is based on 
+X-ray observations of clusters at low redshift \citep{2008A&A...487..431C,2009ApJ...693.1142S}, 
+and, for simplicity, we adopted a self-similar redshift evolution.
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
-\label{sec:6}
-
-{\bf Discussion...}
+\label{sec:7}
 
 {\bf We build a complete cosmological sample of galaxy clusters from the MultiDark 
 $N$-body simulation with redshifts ranging from $z = 0$ to 1. We construct a 
@@ -600,28 +687,30 @@ by X-ray-inferred (CCC and NCCC) gas profiles (taken from the REXCESS sample)
 and a cluster-mass-dependent gas fraction. We assign such a (cluster mass-dependent) 
 gas density profile to each DM halo in our sample and sort it into the NCCC/CCC populations 
 according to a dynamical disturbance parameter that is calculated from the DM distribution.
-With this model, we obtain a cosmologically complete mock catalog of galaxy
-clusters that matches the observed $L_{\rmn{X, bol}}$-to-$M_{500}$,
-$Y_{\rmn{X}}$-to-$M_{500}$, and $Y_{\rmn{SZ}}$-to-$M_{500}$ relations, as well
-as the X-ray luminosity function. We apply it in the companion Paper~2 to 
-predict the radio and gamma-ray emission of our sample. 
+We obtain cosmologically complete mock catalogs of galaxy clusters that matches the 
+observed $L_{\rmn{X, bol}}$-to-$M_{500}$, $Y_{\rmn{X}}$-to-$M_{500}$, and 
+$Y_{\rmn{SZ}}$-to-$M_{500}$ relations, as well as the X-ray luminosity function. 
+In the companion Paper~II, we additionally calculate the possible radio and gamma-ray 
+emission coming from the CR hadronic interactions with the ICM in the clusters. 
 
 Eventually, we provide a cosmologically complete multi-frequency mock catalog for the (non-)thermal 
 cluster emission at different redshifts. We make these catalogs publicly and freely available 
-on-line through the MultiDark database (www.multidark.org). Those contain the quantities
-$\rho_{\rmn{gas}}$, $L_{\rmn{X, bol}}$, $Y_{\rmn{X}}$, $Y_{\rmn{SZ}}$, $L_{120~\rmn{MHz}}$, 
-$L_{1.4~\rmn{GHz}}$, $L_{>100~\rmn{MeV}}$ and $L_{>100~\rmn{GeV}}$ (among many others). 
-We hope that the community can make valuable use of these catalogues in synergy with the future 
-radio, X-ray and gamma-ray data.}
+on-line through the MultiDark database (www.multidark.org). We warn that these catalogs
+are not appropriate for detailed cosmological studies in their (present) published form as 
+carefully modeling of the response function of the considered instrument would be needed 
+for such a purpose, together with the generation of light-cone mock catalogs. Note also that 
+our approach is based on X-ray observations at low redshift, and we adopted a self-similar redshift 
+evolution. Nevertheless, our mock catalogs are good representations of the average cluster population,
+and we hope that the  community can make valuable use of these catalogs in synergy with the future radio, 
+X-ray and gamma-ray data.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
-We thank Anders Pinzke for many useful discussions. We also thank Harald Ebeling, 
-Stefan Gottl{\"o}berg, Anatoly Klypin, Andrey Kravtsov, Adam Mantz, Frazer Pearce, 
-Jos\'e Alberto Rubi\~no, and Gustavo Yepes, for the useful discussions and advices. 
-Finally, we thank the MultiDark database people, in particular Adrian Partl and Kristin Riebe. 
+We thank Harald Ebeling, Stefan Gottl{\"o}berg, Anatoly Klypin, Andrey Kravtsov, Adam Mantz, 
+Frazer Pearce, Jos\'e Alberto Rubi\~no, and Gustavo Yepes, for the useful discussions and advices. 
+We also thank the MultiDark database people, in particular Adrian Partl and Kristin Riebe. 
 F.Z.{\ }acknowledges the CSIC financial support as a JAE-Predoc grant of the 
 program ``Junta para la Ampliaci\'on de Estudios'' co-financed by the FSE. 
 F.Z.{\ }acknowledges the hospitality of the Leiden Observatory during his stay.

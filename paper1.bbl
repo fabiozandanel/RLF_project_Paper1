@@ -1,5 +1,10 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{29}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Arnaud} {et~al}\mbox{.}(2010){Arnaud}, {Pratt}, {Piffaretti},
+  {B{\"o}hringer}, {Croston}, \& {Pointecouteau}}]{2010A&A...517A..92A}
+{Arnaud} M., {Pratt} G.~W., {Piffaretti} R., {B{\"o}hringer} H., {Croston}
+  J.~H., {Pointecouteau} E., 2010, A\&A, 517, A92
 
 \bibitem[{{Battaglia} {et~al}\mbox{.}(2012){Battaglia}, {Bond}, {Pfrommer}, \&
   {Sievers}}]{2011arXiv1109.3709B}
@@ -53,6 +58,14 @@
 \bibitem[{{Hu} \& {Kravtsov}(2003)}]{2003ApJ...584..702H}
 {Hu} W., {Kravtsov} A.~V., 2003, ApJ, 584, 702
 
+\bibitem[{{Jenkins} {et~al}\mbox{.}(2001){Jenkins}, {Frenk}, {White},
+  {Colberg}, {Cole}, {Evrard}, {Couchman}, \& {Yoshida}}]{2001MNRAS.321..372J}
+{Jenkins} A., {Frenk} C.~S., {White} S.~D.~M., {Colberg} J.~M., {Cole} S.,
+  {Evrard} A.~E., {Couchman} H.~M.~P., {Yoshida} N., 2001, MNRAS, 321, 372
+
+\bibitem[{{Kaiser}(1986)}]{1986MNRAS.222..323K}
+{Kaiser} N., 1986, MNRAS, 222, 323
+
 \bibitem[{{Klypin} \& {Holtzman}(1997)}]{1997astro.ph.12217K}
 {Klypin} A., {Holtzman} J., 1997, ArXiv:astro-ph/9712217
 
@@ -73,6 +86,9 @@
   {Rapetti}, \& {Ebeling}}]{2010MNRAS.406.1759M}
 {Mantz} A., {Allen} S.~W., {Rapetti} D., {Ebeling} H., 2010{\natexlab{b}},
   MNRAS, 406, 1759
+
+\bibitem[{{Pfrommer}(2013)}]{2013arXiv1303.5443P}
+{Pfrommer} C., 2013, ArXiv:1303.5443
 
 \bibitem[{{Planck Collaboration}(2013)}]{2013arXiv1303.5080P}
 {Planck Collaboration}, 2013, ArXiv:1303.5080
@@ -126,5 +142,12 @@
   {Forman}, \& {Vikhlinin}}]{2009ApJ...693.1142S}
 {Sun} M., {Voit} G.~M., {Donahue} M., {Jones} C., {Forman} W., {Vikhlinin} A.,
   2009, ApJ, 693, 1142
+
+\bibitem[{{Voit}(2005)}]{2005RvMP...77..207V}
+{Voit} G.~M., 2005, Reviews of Modern Physics, 77, 207
+
+\bibitem[{{Zandanel} {et~al}\mbox{.}(2013){Zandanel}, {Pfrommer}, \&
+  {Prada}}]{paper2}
+{Zandanel} F., {Pfrommer} C., {Prada} F., 2013, ArXiv (Paper~II)
 
 \end{thebibliography}

@@ -331,28 +331,29 @@ as $\rho_{\rmn{gas}}(z) = E(z)^{2} \rho_{\rmn{gas}}(z=0)$, where $E(z)^{2} =
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{X-ray scaling relations and luminosity function}
+\section{X-ray  observables}
 \label{sec:4}
 
-In order to check whether our phenomenologically derived gas profiles reproduce
-the observations, we calculate the bolometric thermal bremsstrahlung
-luminosity $L_{\rmn{bol}}$ as in \cite{1988xrec.book.....S}\footnote{We check
-  our procedure by fitting each of the 31 REXCESS clusters with
+So far, we used a well-observed representative sample of X-ray clusters
+(REXCESS) that was supplemented by X-ray data on gas mass fractions to construct
+our phenomenological gas model.  Here, we will test how our cluster mock data
+compares to various X-ray inferred observables. Those include the observed
+$L_{\rmn{bol}} - M_{500}$ relation, the $Y_X - M_{500}$ relation, and the
+XLF.
+
+\subsection{Scaling Relations}
+
+First, we calculate the bolometric thermal bremsstrahlung luminosity
+$L_{\rmn{bol}}$ following \cite{1988xrec.book.....S}.\footnote{We check our
+  procedure by fitting each of the 31 REXCESS clusters with
   equation~(\ref{eq:gnfw}) and calculating $L_{\rmn{bol}}$ with the measured gas
   temperature of each cluster. As a result, we fall short of the observed
   luminosity by a mean (median) of about $21\%$ ($20\%$). This is reasonable
   considering that we do not permit the parameters $R_{\rmn{c}}$, $\alpha$ and
   $\delta$ to vary between different objects. Additionally, we neglect atomic
   line emission which may give a noticeable contribution, in particularly for
-  low-mass clusters and in the cluster outskirts of larger systems.}  and
-compare our sample result with the observed $L_{\rmn{bol}} - M_{500}$ relation
-and XLF.\footnote{The mean (median) difference at $z=0$ between
-  $L_{\rmn{bol}}$ within $R_{200}$ or within $R_{500}$ is $\approx 5\%$ ($\approx
-  7\%$). While $L_{\rmn{bol}}$ refers to the quantity calculated within
-  $R_{500}$, we note that the XLF for luminosities calculated within $R_{200}$
-  will be barely changed.}
-
-To assign a temperature to our model clusters (that is needed for calculating
+  low-mass clusters and in the cluster outskirts of larger systems.}  To assign
+a temperature to our model clusters (that is needed for calculating
 $L_{\rmn{bol}}$ and $Y_{\rmn{X}}$), we adopt the $T-M_{500}$ relation by
 \cite{2010MNRAS.406.1773M},
 \begin{equation}
@@ -464,13 +465,17 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \end{table}
 
 
-\subsection{X-ray Luminosity Function}
+\subsection{Luminosity Functions}
 Studies of the XLF got out of fashion during the last years due to the
 difficulties of using the X-ray luminosity for cosmological purposes. The X-ray
 emissivity scales with the square of the gas density, which makes it subject to
-density variations and clumping. This implies large scatter that causes a large
-Malmquist bias and underlines the necessity of careful mock surveys that need to
-address all systematics.
+density variations and clumping.\footnote{The mean (median) difference at $z=0$
+  between $L_{\rmn{bol}}$ within $R_{200}$ or within $R_{500}$ is $\approx 5\%$
+  ($\approx 7\%$). While $L_{\rmn{bol}}$ refers to the quantity calculated
+  within $R_{500}$, we note that the XLF for luminosities calculated within
+  $R_{200}$ will be barely changed.} This implies large scatter that causes a
+large Malmquist bias and underlines the necessity of careful mock surveys that
+need to address all systematics.
 
 \begin{figure} 
 \centering

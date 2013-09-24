@@ -26,12 +26,12 @@
 %\voffset-0.5in
 
 %MNRAS
-\title[A Phenomenological Model for the Intra-Cluster Medium]{A Phenomenological Model for the Intra-Cluster Medium that matches X-ray and Sunyaev-Zel'dovich observations}
+\title[A Phenomenological Model for the Intracluster Medium]{A Phenomenological Model for the Intracluster Medium that matches X-ray and Sunyaev-Zel'dovich observations}
 \author[F. Zandanel, C. Pfrommer and F. Prada]{
-Fabio Zandanel$^{1,2 *}$, Christoph Pfrommer$^{3}$ and Francisco Prada$^{4,5,1}$\\
-$^{1}$Instituto de Astrof\'{\i}sica de Andaluc\'{\i}a (CSIC), Glorieta de la Astronom\'{\i}a, E-18080 Granada, Spain\\
-$^{2}$now at GRAPPA Institute, University of Amsterdam, Science Park 904, 1098XH Amsterdam, Netherlands\\
-$^{3}$Heidelberg Institute for Theoretical Studies, Schloss-Wolfsbrunnenweg 35, D-69118 Heidelberg, Germany\\
+Fabio Zandanel$^{1,2}$, Christoph Pfrommer$^{3}$ and Francisco Prada$^{4,5,1}$\\
+$^{1}$GRAPPA Institute, University of Amsterdam, Science Park 904, 1098XH Amsterdam, Netherlands, f.zandanel@uva.nl\\
+$^{2}$Instituto de Astrof\'{\i}sica de Andaluc\'{\i}a (CSIC), Glorieta de la Astronom\'{\i}a, E-18080 Granada, Spain\\
+$^{3}$Heidelberg Institute for Theoretical Studies, Schloss-Wolfsbrunnenweg 35, D-69118 Heidelberg, Germany, christoph.pfrommer@h-its.org\\
 $^{4}$Campus of International Excellence UAM+CSIC, Cantoblanco, E-28049 Madrid, Spain\\
 $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de Madrid, Cantoblanco, E-28049 Madrid, Spain}
 \begin{document}
@@ -46,25 +46,24 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-  Cosmological hydrodynamical simulations of galaxy clusters are still
-  challenged to obtain a model for the intracluster medium that matches all
-  aspects of current X-ray and Sunyaev-Zel'dovich observations. To facilitate
-  such comparisons with future simulations and to enable realistic cluster
-  population studies for modeling e.g., non-thermal emission processes, we
-  construct a phenomenological model for the intracluster medium that is based
-  on a representative sample of X-ray clusters. We create a mock galaxy cluster
-  catalog by assigning our gas density model to each cluster halo of the large
-  collisionless $N$-body simulation {\em MultiDark}, which employs a $\Lambda$
-  cold dark matter cosmology. Our clusters are identified with cool-core and non
-  cool-core clusters according to a dynamical disturbance parameter. We
-  demonstrate that our gas model matches the various observed Sunyaev-Zel'dovich
-  and X-ray scaling relations as well as the X-ray luminosity function, thus
-  enabling a reliable mock catalog for present and future instruments.  In a
-  companion paper, we apply our catalogs to calculate non-thermal radio and
-  gamma-ray emission of galaxy clusters. We make our cosmologically complete
-  multi-frequency mock catalogs for the (non-)thermal cluster emission at
-  different redshifts publicly and freely available online through the MultiDark
-  database.
+  {\bf Cosmological hydrodynamical simulations of galaxy clusters are still
+    challenged to produce a model for the intracluster medium that matches all
+    aspects of current X-ray and Sunyaev-Zel'dovich observations. To facilitate
+    such comparisons with future simulations and to enable realistic cluster
+    population studies for modeling e.g., non-thermal emission processes, we
+    construct a phenomenological model for the intracluster medium that is based
+    on a representative sample of X-ray clusters. We create a mock galaxy
+    cluster catalog by assigning our gas density model to each cluster halo of
+    the large collisionless $N$-body simulation {\em MultiDark}. Our clusters
+    are identified with cool-core and non cool-core clusters according to a
+    dynamical disturbance parameter. We demonstrate that our gas model matches
+    the various observed Sunyaev-Zel'dovich and X-ray scaling relations as well
+    as the X-ray luminosity function, thus enabling a reliable mock catalog for
+    present and future instruments.  In a companion paper, we apply our catalogs
+    to calculate non-thermal radio and gamma-ray emission of galaxy clusters. We
+    make our cosmologically complete multi-frequency mock catalogs for the
+    (non-)thermal cluster emission at different redshifts publicly and freely
+    available online through the MultiDark database.}
 \end{abstract}
 
 \begin{keywords}
@@ -81,75 +80,97 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
 \let\thefootnote\relax\footnotetext{* f.zandanel@uva.nl}
 \endgroup
 
-The study of the (non-)thermal emission in galaxy clusters provides
-important information on structure formation process and on 
-fundamental characteristics of our Universe. This field is at a 
-crucial point of its development thanks to the very low sensitivity of present and future-generation 
-instruments such as LOFAR\footnote{www.lofar.org}, \emph{e}ROSITA\footnote{www.mpe.mpg.de/eROSITA}, 
-ASTRO-H\footnote{astro-h.isas.jaxa.jp} and CTA\footnote{www.cta-observatory.org}, to name but a few. 
-Therefore, it is important to provide prospects for future surveys and
-to understand in which way they can improve our current knowledge.
-To this end, a complete cosmological mock sample of galaxy
-clusters is needed. This can be realized either using analytical 
-expressions for the cluster mass function (e.g., \citealp{2001MNRAS.321..372J}) or cosmological cluster 
-simulations. In this work, we make use of the recent MultiDark $N$-body
-simulation (\citealp{2011arXiv1104.5130P}; www.multidark.org).
+{\bf  Galaxy clusters are the rarest and largest gravitationally-collapsed
+objects in the Universe and form at sites of constructive interference of long
+waves in the primordial density fluctuations. Clusters reach radial extends of a
+few Mpc and total masses $M \sim (10^{14} - 10^{15}) M_{\odot}$, of which
+galaxies, hot ($1-10$~keV) gas and dark matter (DM) contribute roughly for 5, 15
+and 80\%, respectively. If the thermal properties of the intracluster medium
+(ICM) were solely determined by the gravity of the DM potential wells, then
+cluster would obey self-similar scaling relations \citep{1986MNRAS.222..323K}.
+However, X-ray observations have demonstrated that self-similarity is broken,
+especially at low-mass scales (see e.g., \citealp{2005RvMP...77..207V} for a
+review). Apparently the energy input from non-gravitational processes associated
+with galaxy formation have a larger influence in smaller systems, i.e., at
+scales of galaxy groups.
 
-Our main motivation to build such a mock catalog has been to predict the 
-non-thermal emission at radio frequencies of a cosmological 
-complete sample of galaxy clusters. This is presented in a companion 
-paper (\citealp{paper2}; hereafter Paper~II). As described in Paper~II, for 
-any given cluster, fundamental ingredients for the non-thermal emission 
-model are the mass and gas density distribution. The MultiDark 
-simulation used here is a $N$-body, \emph{dark matter (DM)-only} simulation and, 
-therefore, does not contain any information on the intra-cluster medium (ICM) gas  
-distribution. A cosmological complete sample of clusters can 
-only be obtained from $N$-body simulations as hydrodynamical
-simulations of such large volumes are computationally too expensive.
-Therefore, we need a method to determine the ICM properties
-of any given cluster from its total mass. 
+The central cooling time of the X-ray emitting gas in galaxy clusters and groups
+is bimodally distributed. Approximately half of all systems have radiative
+cooling times of less than 1~Gyr and establish a population of cool core (CC)
+clusters while some others have cooling times that are longer than the age of
+the Universe, forming the non-cool core (NCC) cluster population
+\citep{2009ApJS..182...12C,2010A&A...513A..37H}. Several physical processes have
+been proposed to be responsible for balancing radiative cooling of the
+low-entropy gas at the centers of CCs. In particular the self-regulated nature
+of the proposed feedback and observational correlations between radio activity
+and central entropy (which is a proxy for a small cooling time) have put
+feedback by active galactic nuclei (AGN) into the focus of recent research
+\citep{2007ARA&A..45..117M, 2012NJPh...14e5023M}. The underlying physical
+processes responsible for the heating include dissipation of mechanical heating
+by outflows, lobes, or sound waves from the central AGN
+\citep[e.g.,][]{2001ApJ...554..261C, 2002Natur.418..301B, 2002ApJ...581..223R}
+or cosmic-ray heating: streaming cosmic rays excite Alfv\'en waves on which they
+resonantly scatter \citep{1969ApJ...156..445K}.  Damping of these waves
+transfers cosmic ray energy and momentum to the cooling plasma
+\citep{1991ApJ...377..392L, 2008MNRAS.384..251G, 2011A&A...527A..99E,
+  2013MNRAS.434.2209W}, heating it at a rate that balances radiative cooling on
+average at each radius \citep{2013arXiv1303.5443P}.
 
-The simplest approach is to assume that clusters are self-similar with 
-the thermal properties determined by their mass \citep{1986MNRAS.222..323K}.
-However, X-ray observations showed that clusters are extremely 
-complex systems. In fact, we know that self-similarity is broken, especially at 
-low-mass scales (see \citealp{2005RvMP...77..207V} for a review).
-The study of the thermodynamical condition of clusters is crucial 
-to understand how self-similarity is broken. One possible solution 
-is, for example, energy feedback from active galactic nuclei (e.g.,
-\citealp{2013arXiv1303.5443P}). 
+Modeling the formation and evolution of clusters with cosmological
+hydrodynamical simulations has been progressively refined over the last years to
+also include (subresolution models for) AGN feedback
+\citep[e.g.,][]{2007MNRAS.380..877S, 2008MNRAS.387.1403S, 2008ApJ...687L..53P,
+  2012MNRAS.420.2662D, 2012MNRAS.424..190G, 2013MNRAS.428.2366V}. While the
+comparison to data and simulations with AGN feedback improved for integrated
+thermal properties of large cluster samples
+\citep{2012ApJ...758...74B,2012ApJ...758...75B}, there are still notable
+differences for differential quantities such as the pressure profile
+\citep{2013A&A...550A.131P} or the profile of gas mass fractions
+\citep{2012arXiv1209.4082B}. These discrepancies (that have been more dramatic
+in the past without AGN feedback) motivated the development of phenomenological
+models of the ICM \citep[e.g.,][]{2005ApJ...634..964O,
+  2012MNRAS.422..686C}. Here, we construct a simple and purely phenomenological
+model that matches all available X-ray and Sunyaev-Zel'dovich (SZ) data with the
+goal to facilitate comparison of future hydrodynamical simulations, to allow the
+modeling of non-thermal cluster emission over the entire electromagnetic wave
+band, and finally to enable the construction of cluster mock catalogs of the
+(non-)thermal cluster emission of current and future surveys. Such a model for
+the ICM needs to be complementd by a sample of cluster halos, which can either
+be obtained by means of analytical expressions for the cluster mass function
+(e.g., \citealp{2001MNRAS.321..372J}) or cosmological cluster simulations. In
+this work, we make use of the recent collisionless $N$-body simulation {\em
+  MultiDark}, which employs a $\Lambda$ cold dark matter cosmology
+(\citealp{2011arXiv1104.5130P}; www.multidark.org).
 
-In order to build a cluster sample with realistic ICM densities, we 
-adopt a \emph{phenomenological} approach and construct our density 
-profiles from X-ray observations. We then compare the characteristics of 
-the clusters in our mock sample to observational results. We study the X-ray 
-luminosity function (XLF), the luminosity-mass relation, $L_{\rmn{X}}- M$, and 
-the $Y_{\rmn{X}}-M$ relation, where $Y_{\rmn{X}}=M_\rmn{gas}k_{\rmn{B}}T$ 
-with an X-ray-derived gas mass $M_{\rmn{gas}}$ and temperature $T$
-\citep{2006ApJ...650..128K}. Moreover, we consider the thermal 
-Sunyaev-Zel’dovich (SZ) effect and compare our $Y_{\rmn{SZ}}-M$ 
-relation with recent SZ-derived measurements. Only if our model matches
-available cluster data on the gas properties, we can safely use it in Paper~II
-and be sure that we will obtain realistic predictions.
-The final result is a complete cosmological cluster mock catalog, at
-different redshifts, containing information on the DM and ICM properties 
-of each object, together with its (non-)thermal emission at different 
-frequencies. This mock catalog reproduces existing observations
-and is useful in making predictions for future surveys.
+Our \emph{phenomenological} approach uses gas density profiles of a
+representative sample of X-ray clusters, which are complemented by observed
+cluster mass-dependent gas mass fractions. The resulting cluster mock sample are
+then compared to data including the X-ray luminosity function (XLF), the
+luminosity-mass relation, $L_{\rmn{X}}- M$, and the $Y_{\rmn{X}}-M$ relation,
+where $Y_{\rmn{X}}=M_\rmn{gas}k_{\rmn{B}}T$ with an X-ray-derived gas mass
+$M_{\rmn{gas}}$ and temperature $T$ \citep{2006ApJ...650..128K}. We additionally
+compare our $Y_{\rmn{SZ}}-M$ relation to recent SZ-derived measurements.  In a
+companion paper \citep{paper2}, we apply our ICM model to predict the
+non-thermal radio halo emission a cosmological complete sample of galaxy
+clusters, enabling valuable insight into the statistics of radio halos.  On of
+our final data products is a complete cosmological cluster mock catalog, at
+different redshifts, containing information of DM and ICM properties for each
+object, together with its (non-)thermal emission at different frequencies. This
+mock catalog matches existing observations and should serve eminent in making
+predictions for future radio surveys.
 
-In next Section~\ref{sec:2}, we introduce the MultiDark simulation
-along with our final cluster sample. We assign to each of our clusters  
-the phenomenologically constructed gas density profile in 
-Section~\ref{sec:3}. In Sections~\ref{sec:4} and 
-\ref{sec:5}, we show that this approach can successfully reproduce 
-the known X-ray and SZ cluster characteristics. We present the
-resulting mock cluster catalogs in Section~\ref{sec:6}, and eventually 
-summarize our conclusions in Section~\ref{sec:7}.
-In this work, the cluster mass $M_{\Delta}$ and radius $R_{\Delta}$ are defined 
-with respect to a density that is $\Delta=200$ or $\Delta=500$ times the \emph{critical} 
-density of the Universe. We adopt density parameters of $\Omega_{\rmn{m}}=0.3$, 
-$\Omega_{\Lambda}=0.7$ and today's Hubble constant of 
-$H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70} = 0.7$.
+In Section~\ref{sec:2}, we introduce the MultiDark simulation along with our
+final cluster sample. We assign to each of our clusters the phenomenologically
+constructed gas density profile in Section~\ref{sec:3}. In Sections~\ref{sec:4}
+and \ref{sec:5}, we show that this approach can successfully reproduce the
+observed X-ray and SZ cluster data. We present the resulting mock cluster
+catalogs in Section~\ref{sec:6}, and eventually summarize our conclusions in
+Section~\ref{sec:7}.  In this work, the cluster mass $M_{\Delta}$ and radius
+$R_{\Delta}$ are defined with respect to a density that is $\Delta=200$ or
+$\Delta=500$ times the \emph{critical} density of the Universe. We adopt density
+parameters of $\Omega_{\rmn{m}}=0.3$, $\Omega_{\Lambda}=0.7$ and today's Hubble
+constant of $H_0 = 100 \times h_{70}$~km~s$^{-1}$~Mpc$^{-1}$ where $h_{70} =
+0.7$.}
 
 
 
@@ -746,3 +767,36 @@ Ames Research Center.
 \end{document}
 
 
+
+
+
+
+\del{
+The study of the (non-)thermal emission in galaxy clusters provides
+important information on structure formation process and on 
+fundamental characteristics of our Universe. This field is at a 
+crucial point of its development thanks to the very low sensitivity of present and future-generation 
+instruments such as LOFAR\footnote{www.lofar.org}, \emph{e}ROSITA\footnote{www.mpe.mpg.de/eROSITA}, 
+ASTRO-H\footnote{astro-h.isas.jaxa.jp} and CTA\footnote{www.cta-observatory.org}, to name but a few. 
+Therefore, it is important to provide prospects for future surveys and
+to understand in which way they can improve our current knowledge.
+To this end, a complete cosmological mock sample of galaxy
+clusters is needed. This can be realized either using analytical 
+expressions for the cluster mass function (e.g., \citealp{2001MNRAS.321..372J}) or cosmological cluster 
+simulations. In this work, we make use of the recent MultiDark $N$-body
+simulation (\citealp{2011arXiv1104.5130P}; www.multidark.org).
+%
+Our main motivation to build such a mock catalog has been to predict the 
+non-thermal emission at radio frequencies of a cosmological 
+complete sample of galaxy clusters. This is presented in a companion 
+paper (\citealp{paper2}; hereafter Paper~II). As described in Paper~II, for 
+any given cluster, fundamental ingredients for the non-thermal emission 
+model are the mass and gas density distribution. The MultiDark 
+simulation used here is a $N$-body, \emph{dark matter (DM)-only} simulation and, 
+therefore, does not contain any information on the intra-cluster medium (ICM) gas  
+distribution. A cosmological complete sample of clusters can 
+only be obtained from $N$-body simulations as hydrodynamical
+simulations of such large volumes are computationally too expensive.
+Therefore, we need a method to determine the ICM properties
+of any given cluster from its total mass. 
+}

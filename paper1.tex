@@ -55,16 +55,16 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
     construct a phenomenological model for the intracluster medium that is based
     on a representative sample of X-ray clusters. We create a mock galaxy
     cluster catalog by assigning our gas density model to each cluster halo of
-    the large collisionless $N$-body simulation MultiDark. Our clusters
-    are identified with cool-core and non cool-core clusters according to a
+    the large collisionless $N$-body simulation MultiDark. Our clusters are
+    identified with cool-core and non cool-core clusters according to a
     dynamical disturbance parameter. We demonstrate that our gas model matches
     the various observed Sunyaev-Zel'dovich and X-ray scaling relations as well
     as the X-ray luminosity function, thus enabling a reliable mock catalog for
-    present and future instruments.  In a companion paper, we apply our catalogs
-    to calculate non-thermal radio and gamma-ray emission of galaxy clusters. We
-    make our cosmologically complete multi-frequency mock catalogs for the
-    (non-)thermal cluster emission at different redshifts publicly and freely
-    available online through the MultiDark database.}
+    present surveys and forecasts for future instruments. In a companion paper,
+    we apply our catalogs to calculate non-thermal radio and gamma-ray emission
+    of galaxy clusters. We make our cosmologically complete multi-frequency mock
+    catalogs for the (non-)thermal cluster emission at different redshifts
+    publicly and freely available online through the MultiDark database.}
 \end{abstract}
 
 \begin{keywords}
@@ -656,13 +656,16 @@ point out that our mock catalogs also include:
 \item the gamma-ray luminosity, within $R_{500}$, above 100~MeV and 100~GeV.
 \end{itemize}
 
-We note that our mock catalogs are not appropriate for all purposes because they
-represent the average cluster population. While they are very useful as baseline
-for new simulations, for comparisons to new observational samples, and for
-non-thermal modeling of clusters, they are not appropriate to perform detailed
+We note that our mock catalogs are not appropriate for all purposes because the
+density profile shapes that we adopt in our model represent the average cluster
+population of cool-core and non cool-core systems (while we account for scatter
+in the gas mass fractions, i.e., the normalization of the profiles). As such,
+the models are very useful as a baseline for comparisons to new hydrodynamical
+simulations and to new observational samples as well as for non-thermal modeling
+of clusters. On the contrary, they are not appropriate to perform detailed
 cosmology studies. Careful modeling of the response function of the considered
-instrument in combination with light-cone mock catalogs would be required in this
-case. Nevertheless, for volume-complete surveys, our mock catalogs will
+instrument in combination with light-cone mock catalogs would be required in
+this case. Nevertheless, for volume-complete surveys, our mock catalogs will
 certainly serve as valuable tools.  }
 
 
@@ -678,27 +681,31 @@ certainly serve as valuable tools.  }
   and a cluster mass-dependent gas fraction. We assign such a (cluster
   mass-dependent) gas density profile to each DM halo in our sample and sort it
   into the NCCC/CCC populations according to a dynamical disturbance parameter
-  that is calculated from the DM distribution.  We obtain cosmologically
-  complete mock catalogs of galaxy clusters that matches the observed
+  that is calculated from the DM distribution. Applying the model to our sample
+  of cluster halos, we obtain volume complete mock catalogs for the
+  thermal (SZ and X-ray) cluster emission. Our mock catalogs match the observed
   $L_{\rmn{X, bol}}-M_{500}$, $Y_{\rmn{X}}-M_{500}$, and $Y_{\rmn{SZ}}-M_{500}$
   relations, as well as the X-ray luminosity function.  In the companion
   Paper~II, we additionally present a model for the radio and gamma-ray emission
-  as a result of CR hadronic interactions with the ICM.
+  as a result of CR hadronic interactions with the ICM. 
 
-  We provide a cosmologically complete multi-frequency mock catalog for the
-  (non-)thermal cluster emission at different redshifts. We make these catalogs
+  We provide cosmologically complete multi-frequency mock catalogs for the
+  (non-)thermal cluster emission at different redshifts and make these catalogs
   publicly and freely available on-line through the MultiDark database
-  (www.multidark.org). Our mock catalogs are good representations of the average
-  cluster population. They allow quantitative comparisons of future
-  hydrodynamical simulations, the modeling of non-thermal cluster emission from
-  radio to gamma-rays, and the construction of cluster mock catalogs of the
-  (non-)thermal cluster emission. We emphasize that the catalogs are not suited
+  (www.multidark.org). Our mock catalogs are based on density profile shapes
+  that represent the average cluster population of cool-core and non cool-core
+  systems (while we account for scatter in the gas mass fractions, i.e., the
+  normalization of the profiles). As a result, our model does not fully exploit
+  the true variance across the average profile shapes which may result in a
+  limited variance of thermal cluster observables.  Hence, the mock catalogs
+  will allow quantitative comparisons to future hydrodynamical simulations and
+  forecasts for future surveys.  We emphasize that the catalogs are not suited
   for detailed cosmological studies in their (present) published form, which do
   not address any survey response functions nor provide light-cone mock
-  catalogs. However, future surveys should be able to test the underlying assumptions
-  of our modeling approach, which is based on X-ray observations of clusters at
-  low redshift ($z<0.2$) and adopts self-similar redshift evolution for
-  extrapolating to higher redshifts. We hope that the community can make
+  catalogs. However, future surveys should be able to test the underlying
+  assumptions of our modeling approach, which is based on X-ray observations of
+  clusters at low redshift ($z<0.2$) and adopts self-similar redshift evolution
+  for extrapolating to higher redshifts. We hope that the community can make
   valuable use of these catalogs in synergy with the future radio, X-ray and
   gamma-ray data.}
 

@@ -82,7 +82,7 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
   waves in the primordial density fluctuations. Clusters reach radial extends of
   a few Mpc and total masses $M \sim (10^{14} - 10^{15}) M_{\odot}$, of which
   galaxies, hot ($1-10$~keV) gas and dark matter (DM) contribute roughly 5, 15
-  and 80\%, respectively. If the thermal properties of the intracluster medium
+  and 80 per cent, respectively. If the thermal properties of the intracluster medium
   (ICM) were solely determined by the gravity of the system, then clusters would
   obey self-similar scaling relations \citep{1986MNRAS.222..323K}.  However,
   X-ray observations have demonstrated that self-similarity is broken,
@@ -135,7 +135,7 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
   entire electromagnetic wave band, and finally to enable the construction of
   cluster mock catalogs of the thermal and non-thermal cluster emission (in the
   radio, hard X-ray, and gamma-ray band) of current and future surveys. Such a
-  model for the ICM needs to be complemented by a sample of cluster halos, which
+  model for the ICM needs to be applied to a sample of cluster halos, which
   can either be obtained by means of analytical expressions for the cluster mass
   function (e.g., \citealp{2001MNRAS.321..372J}) or cosmological cluster
   simulations. In this work, we make use of the recent collisionless $N$-body
@@ -270,11 +270,20 @@ where $x=R/R_{\rmn{c}}$ and $R_{\rmn{c}}$ is the cluster core radius. To reduce
 the dimensionality of our fit, we fix representative values of $R_{\rmn{c}} =
 0.2\, R_{500}$, $\alpha = 1$ and $\delta = 2.5$. We fit the radial density
 profiles of the REXCESS sample in log-log space, separating them in the two
-categories of NCCCs and CCCs as shown in Fig.~\ref{fig:gas_profiles}.  We
-obtain $n_{\rmn{0,NCCC}} = 1.02\times10^{-2}$~$h_{70}^{1/2}$~cm$^{-3}$,
+categories of NCCCs and CCCs as shown in Fig.~\ref{fig:gas_profiles}.  We obtain
+$n_{\rmn{0,NCCC}} = 1.02\times10^{-2}$~$h_{70}^{1/2}$~cm$^{-3}$,
 $n_{\rmn{0,CCC}} = 8.32\times10^{-3}$~$h_{70}^{1/2}$~cm$^{-3}$,
 $\beta_{\rmn{NCCC}} = -0.093$, and $\beta_{\rmn{CCC}} = 0.592$. The resulting
-fits are shown in blue and red for the NCCC and CCC population, respectively.
+fits are shown in blue and red for the NCCC and CCC population,
+respectively. {\bf As a cautionary remark, we emphasize that our model is only
+  valid within $R_{500}$ and more work would be needed to extrapolate it to
+  larger cluster radii. Those cluster regions are characterized by a steadily
+  increasing level of kinetic-to-thermal pressure support
+  \citep[e.g.,][]{2009ApJ...705.1129L, 2012ApJ...758...74B}, density clumping
+  \citep{2011ApJ...731L..10N, 2012arXiv1209.4082B}, and asphericity and
+  ellipticity of the halo morphologies \citep{2012arXiv1209.4082B}, in
+  particular beyond the virial radius where the filamentary cosmic web connects
+  to the cluster interiors.}
 
 The next step is to introduce a mass-scaling in order to apply our GNFW profiles
 to clusters of all masses. We adopt the gas mass fraction-mass scaling,
@@ -320,7 +329,7 @@ $X_{\rmn{off}}$ computed for the MultiDark halo catalog. This is defined as the
 distance from the halo center to the center of mass in units of the virial
 radius. This parameter assesses the dynamical state of the cluster and whether
 the halo has experienced a recent merger or not. Current observations reveal a ratio
-of NCCCs and CCCs of about $50\%$ (e.g., \citealp{2007A&A...466..805C,
+of NCCCs and CCCs of about 50 per cent (e.g., \citealp{2007A&A...466..805C,
   2009MNRAS.395..764S}). Since there is a correlation between merging clusters
 and NCCCs, we use the median of the $X_{\rmn{off}}$ distribution to separate our
 sample into CCCs and NCCCs (with NCCCs defined to be those halos with the larger
@@ -376,20 +385,21 @@ include the observed $L_{\rmn{bol}} - M_{500}$ relation, the $Y_X - M_{500}$
 relation, and the XLF.}
 
 \subsection{Scaling Relations}
+\label{sec:Xscaling}
 
 First, we calculate the bolometric thermal bremsstrahlung luminosity
 $L_{\rmn{bol}}$ following \cite{1988xrec.book.....S}.\footnote{We check our
   procedure by fitting each of the 31 REXCESS clusters with
   equation~(\ref{eq:gnfw}) and calculate $L_{\rmn{bol}}$ using the measured gas
   temperature of each cluster. As a result, we fall short of the observed
-  luminosity by a mean (median) of about $21\%$ ($20\%$). This is acceptable
-  considering that we do not permit the parameters $R_{\rmn{c}}$, $\alpha$ and
-  $\delta$ to vary between different objects. Additionally, we neglect atomic
-  line emission which may give a noticeable contribution, in particularly for
-  low-mass clusters and in the cluster outskirts of larger systems.}  To assign
-a temperature to our model clusters (that is needed for calculating
-$L_{\rmn{bol}}$ and $Y_{\rmn{X}}$), we adopt the $T-M_{500}$ relation by
-\cite{2010MNRAS.406.1773M},
+  luminosity by a mean (median) of about 21 per cent (20 per cent). This is
+  acceptable considering that we do not permit the parameters $R_{\rmn{c}}$,
+  $\alpha$ and $\delta$ to vary between different objects. Additionally, we
+  neglect atomic line emission which may give a noticeable contribution, in
+  particularly for low-mass clusters and in the cluster outskirts of larger
+  systems.}  To assign a temperature to our model clusters (that is needed for
+calculating $L_{\rmn{bol}}$ and $Y_{\rmn{X}}$), we adopt the $T-M_{500}$
+relation by \cite{2010MNRAS.406.1773M},
 \begin{equation}
 \log_{10} \left( \frac{k_{\rmn{B}}T_{\rmn{ci}}}{\rmn{keV}} \right) = 
 A + B~\log_{10} \left( \frac{E(z) M_{500}}{10^{15} h_{70}^{-1} \rmn{M_{\odot}}} \right)
@@ -426,7 +436,7 @@ of $\sigma_{yx} = 0.185$.
 In the right panel of Fig.~\ref{fig:X_LM}, we compare the $Y_{\rmn{X}}-M_{500}$
 relation of our sample to observational data \citep{2010MNRAS.406.1773M}. The
 model agrees nicely at the high-mass end, but underpredicts the observed scaling
-at low masses by about $20\%$ (at the 1-$\sigma$ level). This is the same level
+at low masses by about 20 per cent (at the 1-$\sigma$ level). This is the same level
 of deviation from the data as in the case of $L_{\rmn{X}}$, which is more
 significant due to the smaller scatter in the $Y_{\rmn{X}}$ relation. The
 differential contribution to the thermal energy per logarithmic interval in
@@ -532,14 +542,14 @@ the \emph{ROSAT} ESO Flux-Limited X-ray (REFLEX; \citealp{2002ApJ...566...93B})
 and HIFLUGCS \citep{2002ApJ...567..716R}.  Note that the XLF is fully determined
 by the mass function and the $L_{\rmn{X}}-M_{500}$ relation after taking into
 account the observational biases.\footnote{The mean (median) difference at $z=0$
-  between $L_{\rmn{bol}}$ within $R_{200}$ or within $R_{500}$ is $\approx 5\%$
-  ($\approx 7\%$). While $L_{\rmn{bol}}$ refers to the quantity calculated
-  within $R_{500}$, we note that the XLF for luminosities calculated within
-  $R_{200}$ will be barely changed.} This means that applying the Malmquist and
-Eddington-bias-corrected $L_{\rmn{X}}-M_{500}$ relation by
+  between $L_{\rmn{bol}}$ within $R_{200}$ or within $R_{500}$ is $\approx 5$
+  per cent ($\approx 7$ per cent). While $L_{\rmn{bol}}$ refers to the quantity
+  calculated within $R_{500}$, we note that the XLF for luminosities calculated
+  within $R_{200}$ will be barely changed.} This means that applying the
+Malmquist and Eddington-bias-corrected $L_{\rmn{X}}-M_{500}$ relation by
 \cite{2010MNRAS.406.1773M} directly to the MultiDark mass function and
 accounting for the observational scatter in $L_{\rmn{X}}-M_{500}$ should yield
-an unbiased XLF. 
+an unbiased XLF.
 
 We show the resulting bolometric and soft-band ($0.1-2.4$~keV) XLF in
 Fig.~\ref{fig:XLF} and compare those to the corresponding BCS XLFs and to our
@@ -564,31 +574,49 @@ leaving this for a future study.
 \section{SZ scaling relations}
 \label{sec:5}
 In the left panel of Fig.~\ref{fig:SZ_M}, we compare the $Y_{\rmn{SZ}}-M_{500}$
-relation in our model (following \citealp{2012ApJ...758...74B}, equation~3) with
+relation of our model (following \citealp{2012ApJ...758...74B}, equation~3) with
 the observed scaling relation by the \cite{2013arXiv1303.5080P}. {\bf We use the
   \emph{Planck} COSMO sample, which is Malmquist-bias corrected and has a median
-  redshift of $0.18$. Hence, we compare the data to our $z=0.2$ relation}. Our
-model reproduces the data remarkably well, except for the high-mass end where
-our simulations have a weaker constraining power due to the smaller box size in
-comparison to the survey volume of {\em Planck}. We find a scatter of
-$\sigma_{yx} \approx 0.11$ which compares well with the \emph{Planck} result of
-$\sigma_{yx} \approx 0.08$. In Table~\ref{tab:YSZfits}, we report our SZ scaling
-relations for different redshifts.
+  redshift of $0.18$, and compare this to our $z=0.2$ relation}. Our model
+reproduces the normalization of the scaling relation remarkably well, except for
+the high-mass end where our simulations have a weaker constraining power due to
+the smaller box size in comparison to the survey volume of {\em Planck}.  {\bf
+  However, the slope of our $Y_{\rmn{SZ}}-M_{500}$ relation ($1.59\pm0.01$) is
+  shallower in comparison to the self-similar slope ($5/3$) as well as the
+  observed slope of the \emph{Planck} COSMO sample. We can analytically
+  understand the cluster-mass scaling of our model by considering its
+  mass-dependent quantities, namely $Y_{\rmn{SZ}}\propto M_{500} f_{\rmn{gas}}
+  T \propto M_{500}^{1.595}$. In particular, we can trace back the
+  shallower slope to the adopted temperature scaling of our model
+  ($T\approx T_{\rmn{ci}}\propto M_{500}^{0.46}$), which includes the cluster core region
+  and yields a shallower mass scaling in comparison to the self-similar
+  expectation ($T\propto M_{500}^{2/3}$). The temperature scaling is only
+  partially countered by the scaling of the gas mass fraction with cluster mass,
+  $f_{\rmn{gas}}\propto M_{500}^{0.135}$. To improve upon this, we would have to
+  account for a slightly steeper temperature-mass scaling (e.g., using a
+  centrally excised temperature scaling, see \citealt{2010MNRAS.406.1773M}) in
+  the outer cluster parts that are of relevance for the SZ flux, as explained in
+  Sect.~\ref{sec:Xscaling}. }  We find a scatter of $\sigma_{yx} \approx 0.11$
+which compares well with the \emph{Planck} result of $\sigma_{yx} \approx
+0.08$. In Table~\ref{tab:YSZfits}, we report our SZ scaling relations for
+different redshifts.
+
 
 \begin{figure*} 
 \centering
 \includegraphics[width=0.48\textwidth]{figures/sz_m.eps}
 \includegraphics[width=0.48\textwidth]{figures/sz_m_ACT.eps}
 \caption{{\bf Comparison of our SZ scaling relations (grey triangles) with
-    data. \emph{Left.}  We compare our $Y_{\rmn{SZ}}-M$ relation at $z=0.2$ with
-    the {\em Planck} data \citep{2013arXiv1303.5080P}, which have a median
-    redshift of about $0.18$.  The black crosses represent the $Y_{\rmn{SZ}}$
-    median values of our sample for a given mass bin (indicated by horizontal
-    error bars), and the vertical error bars represent the standard deviation
-    within a bin. The bottom panels show the relative difference to the
-    observational scaling relations. \emph{Right.} We compare our
-    $Y_{\rmn{SZ}}-M$ relation at $z=0.61$ with the ACT sample
-    \protect\citep{2013JCAP...07..008H} color-coded by redshift.}}
+    data. The bottom panels show the relative difference to the observational
+    scaling relations. \emph{Left.}  We compare our $Y_{\rmn{SZ}}-M$ relation at
+    $z=0.2$ with the {\em Planck} data \citep[blue,][]{2013arXiv1303.5080P},
+    which have a median redshift of about $0.18$.  The black crosses represent
+    the $Y_{\rmn{SZ}}$ median values of our sample for a given mass bin
+    (indicated by horizontal error bars), and the vertical error bars represent
+    the standard deviation within a bin. \emph{Right.} We compare our
+    $Y_{\rmn{SZ}}-M$ relation at $z=0.53$ with the ACT sample
+    \protect\citep[blue,][]{2013JCAP...07..008H} assuming a self-similar
+    redshift evolution.}}
 \label{fig:SZ_M}
 \end{figure*}
 
@@ -618,11 +646,23 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 
 {\bf In the right panel of Fig.~\ref{fig:SZ_M}, we compare our scaling relation
   to the ACT sample overlapping with the Sloan Digital Sky Survey stripe 82
-  \citep{2013JCAP...07..008H}. \qc{Fabio: compare mean and scatter of ACT relation!}
-
-  Overall, there is reassuring agreement between our phenomenological model and
-  the SZ data of the \emph{Planck} and ACT collaborations.  }
+  \citep{2013JCAP...07..008H}, which has a median redshift of $z=0.53$. Again,
+  the slope of our modeled scaling relation is somewhat shallower in comparison
+  to the observed slope. Most strikingly, there appears to be a 30 per cent
+  offset of the scaling relations, which could be due to a number of reasons. On
+  the data side, these could include possible selection effects of the different
+  cluster samples or possible biases associated with density clumping and/or
+  non-thermal pressure contributions inherited from the X-ray informed
+  post-processing that was employed by the ACT Collaboration to construct their
+  $Y_{500}$ estimates. However, this could also indicate that our presented
+  model is too simplistic to capture the rich cluster physics and potentially
+  may even signal deviations from the assumed self-similar redshift evolution
+  (since ACT sample probes on average higher redshift and less massive clusters
+  in comparison to the {\em Planck} sample). Overall, there is reasonable
+  agreement between our phenomenological model and the SZ data of the
+  \emph{Planck} and ACT collaborations.}
  
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -678,27 +718,48 @@ certainly serve as valuable tools.  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions}
+\section{Discussion and Conclusions}
 \label{sec:7}
 
 {\bf We build a complete cosmological sample of galaxy clusters from the
   MultiDark $N$-body simulation with redshifts ranging from $z = 0$ to 1 and
   construct a \emph{phenomenological} model for the ICM. This is characterized
   by X-ray-inferred (CCC and NCCC) gas profiles (taken from the REXCESS sample)
-  and a cluster mass-dependent gas fraction. We assign such a (cluster
+  and a cluster mass-dependent gas fraction. Note that our model is calibrated
+  off X-ray observables within $R_{500}$. More work would be needed to
+  extrapolate the model to larger cluster radii that are characterised by an
+  increased complexity, which manifests itself in a larger kinetic-to-thermal
+  pressure support, an increased level of density clumping, as well as cluster
+  asphericity and ellipticity. In our model, we assign a (cluster
   mass-dependent) gas density profile to each DM halo in our sample and sort it
   into the NCCC/CCC populations according to a dynamical disturbance parameter
   that is calculated from the DM distribution. Applying the model to our sample
-  of cluster halos, we obtain volume complete mock catalogs for the
-  thermal (SZ and X-ray) cluster emission. Our mock catalogs match the observed
-  $L_{\rmn{X, bol}}-M_{500}$, $Y_{\rmn{X}}-M_{500}$, and $Y_{\rmn{SZ}}-M_{500}$
-  relations, as well as the X-ray luminosity function.  In the companion
-  Paper~II, we additionally present a model for the radio and gamma-ray emission
-  as a result of CR hadronic interactions with the ICM. 
+  of cluster halos, we obtain volume complete mock catalogs for the thermal (SZ
+  and X-ray) cluster emission. Our mock catalogs match the observed X-ray
+  luminosity function as well as the $L_{\rmn{X, bol}}-M_{500}$,
+  $Y_{\rmn{X}}-M_{500}$, and $Y_{\rmn{SZ}}-M_{500}$ relations well.
 
-  We provide cosmologically complete multi-frequency mock catalogs for the
-  (non-)thermal cluster emission at different redshifts and make these catalogs
-  publicly and freely available on-line through the MultiDark database
+  However, there are some notable deviations among the different observational
+  scaling relations and our model, which may either point to observational
+  sample selection effects that are not accounted for or missing complexity of
+  our model. This model was specifically constructed to provide a reliable
+  description of the gas density, which necessarily implies a great match of the
+  mock X-ray observables (scaling relations and luminosity functions) as well as
+  the low-redshift and massive cluster sample probed by {\em Planck}. However,
+  we note that our model has a somewhat shallower slope of the
+  $Y_{\rmn{SZ}}-M_{500}$ relation, which implies that the X-ray inferred
+  deviations of self-similarity on small scales become weaker on the larger
+  scales probed through the SZ effect. Moreover, our model overpredicts the
+  normalization of the ACT $Y_{\rmn{SZ}}-M_{500}$ relation (at $z=0.53$) by
+  about 30 per cent. This could either indicate possible selection effects of
+  the different cluster samples or may even signal deviations from the assumed
+  self-similar redshift evolution.
+
+  In the companion Paper~II, we additionally present a model for the radio and
+  gamma-ray emission as a result of hadronic CR interactions with the ICM.  We
+  provide cosmologically complete multi-frequency mock catalogs for the
+  \mbox{(non-)thermal} cluster emission at different redshifts and make these
+  catalogs publicly and freely available on-line through the MultiDark database
   (www.multidark.org). Our mock catalogs are based on density profile shapes
   that represent the average cluster population of cool-core and non cool-core
   systems (while we account for scatter in the gas mass fractions, i.e., the
@@ -706,15 +767,15 @@ certainly serve as valuable tools.  }
   the true variance across the average profile shapes which may result in a
   limited variance of thermal cluster observables.  Hence, the mock catalogs
   will allow quantitative comparisons to future hydrodynamical simulations and
-  forecasts for future surveys.  We emphasize that the catalogs are not suited
-  for detailed cosmological studies in their (present) published form, which do
-  not address any survey response functions nor provide light-cone mock
-  catalogs. However, future surveys should be able to test the underlying
-  assumptions of our modeling approach, which is based on X-ray observations of
-  clusters at low redshift ($z<0.2$) and adopts self-similar redshift evolution
-  for extrapolating to higher redshifts. We hope that the community can make
-  valuable use of these catalogs in synergy with the future radio, X-ray and
-  gamma-ray data.}
+  forecasts for future surveys.  We emphasize, however, that the catalogs are
+  not suited for detailed cosmological studies in their (present) published
+  form, which do not address any survey response functions nor provide
+  light-cone mock catalogs. However, future surveys should be able to test the
+  underlying assumptions of our modeling approach, which is based on X-ray
+  observations of clusters at low redshift ($z<0.2$) and adopts self-similar
+  redshift evolution for extrapolating to higher redshifts. We hope that the
+  community can make valuable use of these catalogs in synergy with the future
+  radio, X-ray and gamma-ray data.}
 
 
 

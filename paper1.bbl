@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{52}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Battaglia} {et~al}\mbox{.}(2012{\natexlab{a}}){Battaglia}, {Bond},
@@ -122,6 +122,10 @@
 \bibitem[{{Kulsrud} \& {Pearce}(1969)}]{1969ApJ...156..445K}
 {Kulsrud} R., {Pearce} W.~P., 1969, ApJ, 156, 445
 
+\bibitem[{{Lau} {et~al}\mbox{.}(2009){Lau}, {Kravtsov}, \&
+  {Nagai}}]{2009ApJ...705.1129L}
+{Lau} E.~T., {Kravtsov} A.~V., {Nagai} D., 2009, ApJ, 705, 1129
+
 \bibitem[{{Loewenstein} {et~al}\mbox{.}(1991){Loewenstein}, {Zweibel}, \&
   {Begelman}}]{1991ApJ...377..392L}
 {Loewenstein} M., {Zweibel} E.~G., {Begelman} M.~C., 1991, ApJ, 377, 392
@@ -141,6 +145,9 @@
 
 \bibitem[{{McNamara} \& {Nulsen}(2012)}]{2012NJPh...14e5023M}
 {McNamara} B.~R., {Nulsen} P.~E.~J., 2012, New Journal of Physics, 14, 055023
+
+\bibitem[{{Nagai} \& {Lau}(2011)}]{2011ApJ...731L..10N}
+{Nagai} D., {Lau} E.~T., 2011, ApJL, 731, L10
 
 \bibitem[{{Ostriker} {et~al}\mbox{.}(2005){Ostriker}, {Bode}, \&
   {Babul}}]{2005ApJ...634..964O}

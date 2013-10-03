@@ -86,7 +86,7 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
   (ICM) were solely determined by the gravity of the system, then clusters would
   obey self-similar scaling relations \citep{1986MNRAS.222..323K}.  However,
   X-ray observations have demonstrated that self-similarity is broken,
-  especially at low-mass scales (see e.g., \citealp{2005RvMP...77..207V} for a
+  especially at low-mass scales (see, e.g., \citealp{2005RvMP...77..207V} for a
   review). Apparently the energy input from non-gravitational processes
   associated with galaxy formation have a larger influence in smaller systems,
   i.e., at scales of galaxy groups.
@@ -94,7 +94,7 @@ $^{5}$Instituto de F\'{\i}sica Te\'orica, (UAM/CSIC), Universidad Aut\'onoma de 
   The central cooling time of the X-ray emitting gas in galaxy clusters and
   groups is bimodally distributed. Approximately half of all systems have
   radiative cooling times of less than 1~Gyr and establish a population of cool
-  core clusters (CCC) while others have cooling times that can be longer than
+  core clusters (CCCs) while others have cooling times that can be longer than
   the age of the Universe, forming the non-cool core cluster (NCCC) population
   \citep{2009ApJS..182...12C,2010A&A...513A..37H}. Several physical processes
   have been proposed to be responsible for balancing radiative cooling of the
@@ -225,6 +225,7 @@ redshift $z$ & number of halos \\
  0.05 &  13103\\
  0.1~~ &  12398\\
  0.16 & 11419\\
+ 0.18 &  11106\\
  0.2~~ &  10783\\ 
  0.27 & ~~9772\\
  0.32 & ~~9039\\
@@ -362,14 +363,18 @@ this profile to high-$z$, we adopt a \emph{self-similar} scaling of the gas
 density as $\rho_{\rmn{gas}}(z) = E(z)^{2} \rho_{\rmn{gas}}(z=0)$, where
 $E(z)^{2} = \Omega_{\rmn{m}} (1+z)^{3} + \Omega_{{\Lambda}}$.
 
-{\bf As a cautionary remark, we emphasize that our model is only valid within
-  $R_{500}$ and more work is needed to extrapolate it to larger cluster
-  radii. Those cluster regions are characterized by a steadily increasing level
-  of kinetic-to-thermal pressure support \citep[e.g.,][]{2009ApJ...705.1129L,
-    2012ApJ...758...74B}, density clumping \citep{2011ApJ...731L..10N,
-    2012arXiv1209.4082B}, and asphericity and ellipticity of the halo
-  morphologies \citep{2012arXiv1209.4082B}, in particular beyond the virial
-  radius where the filamentary cosmic web connects to the cluster interiors.}
+%{\bf As a cautionary remark, we emphasize that our model is only valid within
+%$R_{500}$ and more work is needed to extrapolate it to larger cluster
+%radii, \qc{particularly for the thermal modeling}.
+{\bf As a cautionary remark, \qc{we emphasize that our model is built
+to be valid within $R_{500}$ and more work is needed to extrapolate it to 
+larger cluster radii, particularly for the thermal modeling}.
+Those cluster regions are characterized by a steadily increasing level
+of kinetic-to-thermal pressure support \citep[e.g.,][]{2009ApJ...705.1129L,
+2012ApJ...758...74B}, density clumping \citep{2011ApJ...731L..10N,
+2012arXiv1209.4082B}, and asphericity and ellipticity of the halo
+morphologies \citep{2012arXiv1209.4082B}, in particular beyond the virial
+radius where the filamentary cosmic web connects to the cluster interiors.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -574,11 +579,32 @@ leaving this for a future study.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SZ scaling relations}
 \label{sec:5}
+
+\begin{figure*} 
+\centering
+\includegraphics[width=0.48\textwidth]{figures/sz_m.eps}
+\includegraphics[width=0.48\textwidth]{figures/sz_m_ACT.eps}
+\caption{{\bf Comparison of our SZ scaling relations (grey triangles) with
+    data. The black crosses represent
+    the $Y_{\rmn{SZ}}$ median values of our sample for a given mass bin
+    (indicated by horizontal error bars), and the vertical error bars represent
+    the standard deviation within a bin. 
+    The bottom panels show the relative difference to the observational
+    scaling relations.
+    \emph{Left.}  We compare our $Y_{\rmn{SZ}}-M$ relation at
+    $z=0.18$ with the {\em Planck} data \citep[blue,][]{2013arXiv1303.5080P},
+    which have a median redshift of about $0.18$. \emph{Right.} We compare our
+    $Y_{\rmn{SZ}}-M$ relation at $z=0.53$ with the ACT sample
+    \protect\citep[blue,][]{2013JCAP...07..008H} assuming a self-similar
+    redshift evolution.}}
+\label{fig:SZ_M}
+\end{figure*}
+
 In the left panel of Fig.~\ref{fig:SZ_M}, we compare the $Y_{\rmn{SZ}}-M_{500}$
 relation of our model (following \citealp{2012ApJ...758...74B}, equation~3) with
 the observed scaling relation by the \cite{2013arXiv1303.5080P}. {\bf We use the
   \emph{Planck} COSMO sample, which is Malmquist-bias corrected and has a median
-  redshift of $0.18$, and compare this to our $z=0.2$ relation}. Our model
+  redshift of $0.18$, and compare this to our $z=0.18$ relation}. Our model
 reproduces the normalization of the scaling relation remarkably well, except for
 the high-mass end where our simulations have a weaker constraining power due to
 the smaller box size in comparison to the survey volume of {\em Planck}.  {\bf
@@ -602,25 +628,6 @@ which compares well with the \emph{Planck} result of $\sigma_{yx} \approx
 0.08$. In Table~\ref{tab:YSZfits}, we report our SZ scaling relations for
 different redshifts.
 
-
-\begin{figure*} 
-\centering
-\includegraphics[width=0.48\textwidth]{figures/sz_m.eps}
-\includegraphics[width=0.48\textwidth]{figures/sz_m_ACT.eps}
-\caption{{\bf Comparison of our SZ scaling relations (grey triangles) with
-    data. The bottom panels show the relative difference to the observational
-    scaling relations. \emph{Left.}  We compare our $Y_{\rmn{SZ}}-M$ relation at
-    $z=0.2$ with the {\em Planck} data \citep[blue,][]{2013arXiv1303.5080P},
-    which have a median redshift of about $0.18$.  The black crosses represent
-    the $Y_{\rmn{SZ}}$ median values of our sample for a given mass bin
-    (indicated by horizontal error bars), and the vertical error bars represent
-    the standard deviation within a bin. \emph{Right.} We compare our
-    $Y_{\rmn{SZ}}-M$ relation at $z=0.53$ with the ACT sample
-    \protect\citep[blue,][]{2013JCAP...07..008H} assuming a self-similar
-    redshift evolution.}}
-\label{fig:SZ_M}
-\end{figure*}
-
 \begin{table} 
 \begin{center}
 \caption{$Y_{\rmn{SZ}, 500}-M_{500}$ scaling relations.}
@@ -631,13 +638,14 @@ different redshifts.
 redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \hline\\[-0.5em]
  0      & $-27.93\pm0.07$ & $1.60\pm0.01$ & 0.109\\
- 0.1   & $-27.74\pm0.07$ & $1.59\pm0.01$ & 0.109\\
- 0.18 & $-27.73\pm0.08$ & $1.59\pm0.01$ & 0.109\\
- 0.2   & $-27.65\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
- 0.4   & $-27.57\pm0.10$ & $1.59\pm0.01$ & 0.108\\ 
- 0.61 & $-27.50\pm0.13$ & $1.59\pm0.01$ & 0.109\\ 
- 0.78 & $-27.15\pm0.18$ & $1.58\pm0.01$ & 0.109\\ 
- 1      & $-27.01\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em] 
+ 0.1   & $-27.75\pm0.07$ & $1.59\pm0.01$ & 0.109\\
+ 0.18 & $-27.75\pm0.08$ & $1.59\pm0.01$ & 0.109\\
+ 0.2   & $-27.68\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
+ 0.4   & $-27.62\pm0.10$ & $1.59\pm0.01$ & 0.108\\
+ 0.53 & $-27.67\pm0.11$ & $1.59\pm0.01$ & 0.109\\
+ 0.61 & $-27.59\pm0.13$ & $1.59\pm0.01$ & 0.109\\ 
+ 0.78 & $-27.26\pm0.18$ & $1.58\pm0.01$ & 0.109\\ 
+ 1      & $-27.16\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em] 
 \hline
 \end{tabular}
 \label{tab:YSZfits}
@@ -646,20 +654,24 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \end{table}
 
 {\bf In the right panel of Fig.~\ref{fig:SZ_M}, we compare our scaling relation
-  to the ACT sample overlapping with the Sloan Digital Sky Survey stripe 82
-  \citep{2013JCAP...07..008H}, which has a median redshift of $z=0.53$. Again,
-  the slope of our modeled scaling relation is somewhat shallower in comparison
+  to the \qc{recent Atacama Cosmology Telescope (ACT) sample} \citep{2013JCAP...07..008H}, 
+  which has a median redshift of $z=0.53$. 
+  Again, the slope of our modeled scaling relation is somewhat shallower in comparison
   to the observed slope. Most strikingly, there appears to be a 30 per cent
   offset of the scaling relations, which could be due to a number of reasons. On
   the data side, these could include possible selection effects of the different
   cluster samples or possible biases associated with density clumping and/or
   non-thermal pressure contributions inherited from the X-ray informed
   post-processing that was employed by the ACT Collaboration to construct their
-  $Y_{500}$ estimates. However, this could also indicate that our presented
+  $Y_{500}$ estimates. This could also indicate that our presented
   model is too simplistic to capture the rich cluster physics and potentially
   may even signal deviations from the assumed self-similar redshift evolution
   (since ACT sample probes on average higher redshift and less massive clusters
-  in comparison to the {\em Planck} sample). Overall, there is reasonable
+  in comparison to the {\em Planck} sample). 
+  \qc{However, note that our scaling relation at $z=0.53$ ($A=-27.67\pm0.11$, $B=1.59\pm0.01$) 
+  is perfectly compatible within the errors with the one derived from the ACT sample 
+  ($A=-28.59\pm2.26$, $B=1.65\pm0.15$).  
+  Therefore, we conclude that overall} there is reasonable
   agreement between our phenomenological model and the SZ data of the
   \emph{Planck} and ACT collaborations.}
  
@@ -740,7 +752,8 @@ certainly serve as valuable tools.  }
   luminosity function as well as the $L_{\rmn{X, bol}}-M_{500}$,
   $Y_{\rmn{X}}-M_{500}$, and $Y_{\rmn{SZ}}-M_{500}$ relations well.
 
-  However, there are some notable deviations among the different observational
+%However, there are some notable deviations among the different observational
+  However, there are \qc{some deviations} among the different observational
   scaling relations and our model, which may either point to observational
   sample selection effects that are not accounted for or missing complexity of
   our model. This model was specifically constructed to provide a reliable
@@ -754,7 +767,8 @@ certainly serve as valuable tools.  }
   normalization of the ACT $Y_{\rmn{SZ}}-M_{500}$ relation (at $z=0.53$) by
   about 30 per cent. This could either indicate possible selection effects of
   the different cluster samples or may even signal a deviation from the assumed
-  self-similar redshift evolution.
+  self-similar redshift evolution. \qc{Nevertheless, we stress that our scaling relation
+  is still compatible within the errors of the ACT one.} 
 
   In the companion Paper~II, we additionally present a model for the radio and
   gamma-ray emission as a result of hadronic CR interactions with the ICM.  We
@@ -814,59 +828,3 @@ Ames Research Center.
 \end{document}
 
 
-
-
-
-
-\del{
-The study of the (non-)thermal emission in galaxy clusters provides
-important information on structure formation process and on 
-fundamental characteristics of our Universe. This field is at a 
-crucial point of its development thanks to the very low sensitivity of present and future-generation 
-instruments such as LOFAR\footnote{www.lofar.org}, \emph{e}ROSITA\footnote{www.mpe.mpg.de/eROSITA}, 
-ASTRO-H\footnote{astro-h.isas.jaxa.jp} and CTA\footnote{www.cta-observatory.org}, to name but a few. 
-Therefore, it is important to provide prospects for future surveys and
-to understand in which way they can improve our current knowledge.
-To this end, a complete cosmological mock sample of galaxy
-clusters is needed. This can be realized either using analytical 
-expressions for the cluster mass function (e.g., \citealp{2001MNRAS.321..372J}) or cosmological cluster 
-simulations. In this work, we make use of the recent MultiDark $N$-body
-simulation (\citealp{2011arXiv1104.5130P}; www.multidark.org).
-%
-Our main motivation to build such a mock catalog has been to predict the 
-non-thermal emission at radio frequencies of a cosmological 
-complete sample of galaxy clusters. This is presented in a companion 
-paper (\citealp{paper2}; hereafter Paper~II). As described in Paper~II, for 
-any given cluster, fundamental ingredients for the non-thermal emission 
-model are the mass and gas density distribution. The MultiDark 
-simulation used here is a $N$-body, \emph{dark matter (DM)-only} simulation and, 
-therefore, does not contain any information on the intra-cluster medium (ICM) gas  
-distribution. A cosmological complete sample of clusters can 
-only be obtained from $N$-body simulations as hydrodynamical
-simulations of such large volumes are computationally too expensive.
-Therefore, we need a method to determine the ICM properties
-of any given cluster from its total mass. 
-%
-ACT SZ:
-This sample has a median redshift of 0.58 with
-  rms of 0.28. \cite{2013JCAP...07..008H} provides $Y_{\rmn{SZ}}$ within
-  $R_{500}$, which median, $0.42$~h$_{70}^{-1}$~Mpc, is almost half of ours at
-  the MultiDark snapshot $z=0.61$. Therefore, we use an aperture of
-  $0.42$~h$_{70}^{-1}$~Mpc to calculate our $Y_{\rmn{SZ, ACT}}$.  The fact that
-  our $R_{500}$ does not compare well with the ACT values, while it does with
-  \emph{Planck}, may be explained as follows. We adopt the ACT measurements
-  derived from the 148~GHz data assuming that the cluster pressure is described
-  by the universal profile of \cite{2010A&A...517A..92A}. In contrast,
-  \cite{2013arXiv1303.5080P} derived $R_{500}$ from X-ray measurements of
-  $M_{500}$, similarly to our approach of constructing gas densities from an
-  X-ray sample of clusters.
-%
-Summarizing, our SZ scaling relations compare very well to the result from
-the \emph{Planck} collaboration. However, the comparison with the SPT and 
-ACT samples is not as straightforward due to the different selection function 
-of these telescopes with respect to \emph{Planck}, which results in a much
-more (redshift) non-homogeneous sample. Nevertheless, our mock clusters 
-can reproduce well the median SPT and ACT populations. A more detailed
-comparison would need the generation of light-cone mock catalogs,
-including instrumental effects, which is beyond the scope of this 
-work.}

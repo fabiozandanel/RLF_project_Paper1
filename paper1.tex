@@ -1,12 +1,7 @@
 \documentclass[useAMS,usenatbib]{mn2e}                                  
-%
-%\def\del#1{{\bf  [deleted text] }} \def\new#1{{\bf #1}} \def\remark#1{{\bf  [remark: #1]}}
-%\def\del#1{} \def\new#1{#1} \def\remark#1{}
 
 \def\del#1{{}}
-%\def\del#1{{\bf (DELETED TEXT)}}
 \def\C#1{{\bf #1}}
-%\def\C#1{#1}
 
 \usepackage{graphicx}
 \usepackage{natbib}
@@ -22,7 +17,6 @@
 \newcommand{\eps}{\varepsilon}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\vel}{\upsilon}
-
 
 %\voffset-0.6in
 
@@ -222,27 +216,19 @@ our final cluster sample at different redshifts.
 redshift $z$ & number of halos \\
 \hline\\[-0.5em]
  0.0~~ &  13763\\
- 0.05 &  13103\\
  0.1~~ &  12398\\
- 0.16 & 11419\\
  0.18 &  11106\\
  0.2~~ &  10783\\ 
- 0.27 & ~~9772\\
- 0.32 & ~~9039\\
- 0.37 & ~~8197\\
  0.4~~ &   ~~7789\\
- 0.47 & ~~6957\\
  0.53 & ~~6079\\ 
  0.61 &  ~~5187\\ 
- 0.69 & ~~4288\\
  0.78 &  ~~3372\\ 
- 0.89 & ~~2575\\
  1.0~~ &  ~~1803\\[0.5em]
 \hline
 \end{tabular}
 \label{tab:z}
 \end{center}
-\footnotesize{Note. We show the number of halos in our MultiDark snapshots at redshift $z$ for $M_{200}\geq1\times10^{14}$~$h^{-1}$~M$_{\odot}\approx1.4\times10^{14}$~$h_{70}^{-1}$~M$_{\odot}$. }
+\footnotesize{Note. We show the number of halos in our MultiDark snapshots at redshift $z$ for $M_{200}\geq1\times10^{14}$~$h^{-1}$~M$_{\odot}\approx1.4\times10^{14}$~$h_{70}^{-1}$~M$_{\odot}$. {\bf More snapshots can be found online at www.mutlidark.org.}}
 \end{table}
 
 
@@ -293,7 +279,6 @@ densities in the fully ionized ICM \citep{1988xrec.book.....S}. For each cluster
 $i$ of our sample, we then define a \emph{mass-scaled} gas profile as
 $\rho_{\rmn{gas},i}=C_{i} \,\rho_{\rmn{gas}}$ with:
 \begin{eqnarray}
-%C_{i}  =  (0.0616\pm(0.0060g_{1}))  h_{73}^{-1.5}  \left(\frac{M_{500,i}}{10^{13} h_{73}^{-1} \rmn{M_{\odot}}}\right)^{0.135\pm(0.030g_{2})} \nonumber \\
 C_{i}  & = &  (0.0656\pm(0.0064g_{1})) \, h_{70}^{-1.5}  \nonumber \\
  & \times & \left(\frac{M_{500,i}}{1.04 \times 10^{13} h_{70}^{-1} \rmn{M_{\odot}}}\right)^{0.135\pm(0.030g_{2})} \frac{M_{500,i}}{\int_{0}^{R_{500,i}} \rho_{\rmn{gas}} \rmn{d}V}
 \label{eq:gas_scaling}
@@ -333,7 +318,6 @@ surveys will have to determine this property also as a function of redshift.
 \centering
 \includegraphics[width=0.48\textwidth]{figures/lx_m.eps}
 \includegraphics[width=0.48\textwidth]{figures/yx_m.eps}
-%\includegraphics[width=0.33\textwidth]{figures/sz_m.eps}
 \caption{{\bf X-ray scaling relations. Grey triangles show the MultiDark
   sample (limited to the mass range covered by observations), the black line is
   the corresponding scaling relation, and the blue line is the
@@ -345,10 +329,6 @@ surveys will have to determine this property also as a function of redshift.
   \protect\cite{2010MNRAS.406.1773M} with a median of $z \approx 0.2$. 
   \emph{Right.} $Y_{\rmn{X}}-M_{500}$ scaling relation of our model in comparison to the
   observational sample by \protect\cite{2010MNRAS.406.1773M}.}} 
-  %\emph{Right.} $Y_{\rmn{SZ}}-M_{500}$ scaling relation at $z=0.2$ in comparison
-  %to the observational sample by the \protect\cite{2013arXiv1303.5080P} with a 
-  %median redshift of about $0.18$. The bottom panels show the relative difference to
-  %the observational scaling relations.}
 \label{fig:X_LM}
 \end{figure*}
 
@@ -476,9 +456,11 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \hline \\[-0.5em]
  0      & $-21.41\pm0.11$ & $1.50\pm0.01$ & 0.179\\
  0.1   & $-21.30\pm0.12$ & $1.50\pm0.01$ & 0.179\\
+ 0.18   & $-21.49\pm0.13$ & $1.51\pm0.01$ & 0.177\\
  0.2   & $-21.50\pm0.13$ & $1.51\pm0.01$ & 0.178\\ 
  0.4   & $-21.13\pm0.17$ & $1.49\pm0.01$ & 0.178\\ 
- 0.61 & $-21.59\pm0.22$ & $1.53\pm0.01$ & 0.177\\ 
+ 0.53   & $-21.45\pm0.19$ & $1.52\pm0.01$ & 0.176\\
+ 0.61 & $-21.60\pm0.22$ & $1.53\pm0.01$ & 0.177\\ 
  0.78 & $-20.73\pm0.29$ & $1.48\pm0.02$ & 0.177\\ 
  1      & $-20.45\pm0.42$ & $1.46\pm0.03$ & 0.177\\[0.5em]
 \hline
@@ -497,13 +479,15 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \phantom{\Big|}
 redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
 \hline\\[-0.5em]
- 0      & $-9.18\pm0.07$ & $1.61\pm0.01$ & 0.109\\
- 0.1   & $-8.85\pm0.07$ & $1.59\pm0.01$ & 0.109\\
- 0.2   & $-8.82\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
- 0.4   & $-8.79\pm0.10$ & $1.59\pm0.01$ & 0.108\\ 
- 0.61 & $-8.65\pm0.14$ & $1.59\pm0.01$ & 0.109\\ 
- 0.78 & $-8.36\pm0.18$ & $1.57\pm0.01$ & 0.109\\ 
- 1      & $-8.28\pm0.26$ & $1.57\pm0.02$ & 0.109\\[0.5em]  
+ 0      & $-9.09\pm0.07$ & $1.60\pm0.01$ & 0.109\\
+ 0.1   & $-8.90\pm0.07$ & $1.59\pm0.01$ & 0.109\\
+ 0.18   & $-8.90\pm0.08$ & $1.59\pm0.01$ & 0.109\\
+ 0.2   & $-8.83\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
+ 0.4   & $-8.78\pm0.10$ & $1.59\pm0.01$ & 0.108\\ 
+ 0.53   & $-8.82\pm0.12$ & $1.60\pm0.01$ & 0.108\\ 
+ 0.61 & $-8.74\pm0.14$ & $1.59\pm0.01$ & 0.109\\ 
+ 0.78 & $-8.40\pm0.18$ & $1.58\pm0.01$ & 0.109\\ 
+ 1      & $-8.30\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em]  
 \hline
 \end{tabular}
 \label{tab:YXfits}
@@ -639,10 +623,10 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
  0.18 & $-27.75\pm0.08$ & $1.59\pm0.01$ & 0.109\\
  0.2   & $-27.68\pm0.08$ & $1.59\pm0.01$ & 0.109\\ 
  0.4   & $-27.62\pm0.10$ & $1.59\pm0.01$ & 0.108\\
- 0.53 & $-27.67\pm0.11$ & $1.59\pm0.01$ & 0.109\\
+ 0.53 & $-27.67\pm0.12$ & $1.60\pm0.01$ & 0.109\\
  0.61 & $-27.59\pm0.13$ & $1.59\pm0.01$ & 0.109\\ 
  0.78 & $-27.26\pm0.18$ & $1.58\pm0.01$ & 0.109\\ 
- 1      & $-27.16\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em] 
+ 1      & $-27.17\pm0.26$ & $1.58\pm0.02$ & 0.109\\[0.5em] 
 \hline
 \end{tabular}
 \label{tab:YSZfits}
@@ -665,7 +649,7 @@ redshift $z$ & $A$ & $B$ & $\sigma_{yx}$ \\
   deviations from the assumed self-similar redshift evolution (since the ACT
   sample probes on average higher redshift and less massive clusters in
   comparison to the {\em Planck} sample).  However, note that our scaling
-  relation at $z=0.53$ ($A=-27.67\pm0.11$, $B=1.59\pm0.01$) is within the
+  relation at $z=0.53$ ($A=-27.67\pm0.12$, $B=1.60\pm0.01$) is within the
   uncertainties compatible with that of the ACT sample ($A=-28.59\pm2.26$,
   $B=1.65\pm0.15$).  Thus, we conclude that overall there is reasonable
   agreement between our phenomenological model and the SZ data of the
@@ -736,7 +720,7 @@ certainly serve as valuable tools.  }
   by X-ray-inferred (CCC and NCCC) gas profiles (taken from the REXCESS sample)
   and a cluster mass-dependent gas fraction. Note that our model is calibrated
   off X-ray observables within $R_{500}$. More work would be needed to
-  extrapolate the model to larger cluster radii that are characterised by an
+  extrapolate the model to larger cluster radii that are characterized by an
   increased complexity, which manifests itself in a larger kinetic-to-thermal
   pressure support, an increased level of density clumping, as well as cluster
   asphericity and ellipticity. In our model, we assign a (cluster
